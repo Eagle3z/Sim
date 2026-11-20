@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سين جيم // Royal VIP Edition — لعبة المسابقات الجماعية</title>
+    <title>اك جيم // Royal VIP Edition — لعبة المسابقات الجماعية</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;600;700;800;900&family=Tajawal:wght@500;700;800;900&display=swap" rel="stylesheet">
@@ -12,23 +12,23 @@
         :root {
             --bg-obsidian: #07090e;
             --bg-carbon: #0d111a;
-            --glass-panel: rgba(16, 21, 33, 0.86);
-            --glass-card: rgba(22, 29, 46, 0.92);
+            --glass-panel: rgba(16, 21, 33, 0.88);
+            --glass-card: rgba(22, 29, 46, 0.94);
             --gold-primary: #f59e0b;
             --gold-bright: #fbbf24;
-            --gold-dim: rgba(245, 158, 11, 0.3);
+            --gold-dim: rgba(245, 158, 11, 0.32);
             --neon-cyan: #22d3ee;
             --amber-orange: #f97316;
             --team1-blue: #3b82f6;
-            --team1-glow: rgba(59, 130, 246, 0.36);
+            --team1-glow: rgba(59, 130, 246, 0.38);
             --team2-amber: #f97316;
-            --team2-glow: rgba(249, 115, 22, 0.36);
+            --team2-glow: rgba(249, 115, 22, 0.38);
             --emerald-win: #10b981;
             --crimson-alert: #ef4444;
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
             --border-subtle: rgba(255, 255, 255, 0.08);
-            --shadow-vip: 0 20px 50px rgba(0, 0, 0, 0.65);
+            --shadow-vip: 0 20px 50px rgba(0, 0, 0, 0.68);
         }
 
         * {
@@ -55,7 +55,7 @@
             background-color: var(--bg-obsidian);
             color: var(--text-main);
             min-height: 100vh;
-            padding-bottom: 150px;
+            padding-bottom: 155px;
             overflow-x: hidden;
             position: relative;
         }
@@ -95,7 +95,7 @@
 
         /* ================= HEADER ================= */
         .top-header {
-            background: rgba(11, 15, 25, 0.9);
+            background: rgba(11, 15, 25, 0.92);
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px);
             border-bottom: 1px solid var(--gold-dim);
@@ -107,7 +107,7 @@
         }
 
         .header-inner {
-            max-width: 1340px;
+            max-width: 1360px;
             margin: 0 auto;
             display: flex;
             align-items: center;
@@ -128,7 +128,7 @@
             background: linear-gradient(135deg, #fde047 0%, #f59e0b 55%, #ea580c 100%);
             color: #07090e;
             font-weight: 900;
-            font-size: 1.3rem;
+            font-size: 1.28rem;
             padding: 4px 16px;
             border-radius: 14px;
             box-shadow: 0 0 22px rgba(245, 158, 11, 0.45);
@@ -138,7 +138,7 @@
         }
 
         .brand-sub {
-            font-size: 0.84rem;
+            font-size: 0.82rem;
             font-weight: 800;
             color: var(--neon-cyan);
             background: rgba(34, 211, 238, 0.09);
@@ -249,7 +249,7 @@
         .main-wrapper {
             position: relative;
             z-index: 1;
-            max-width: 1340px;
+            max-width: 1360px;
             margin: 24px auto 0;
             padding: 0 16px;
         }
@@ -345,7 +345,7 @@
 
         .cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(156px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(154px, 1fr));
             gap: 16px;
         }
 
@@ -440,24 +440,44 @@
         }
 
         .cat-card-art {
-            background: radial-gradient(circle at center, rgba(245, 158, 11, 0.15) 0%, rgba(13, 17, 26, 0.96) 88%);
-            height: 112px;
+            background: linear-gradient(160deg, rgba(30, 41, 59, 0.78) 0%, rgba(15, 23, 42, 0.96) 55%, rgba(10, 14, 23, 0.99) 100%);
+            height: 120px;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 12px;
             position: relative;
+            border-bottom: 1px solid rgba(251, 191, 36, 0.16);
+        }
+
+        .cat-card-art::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 35%, rgba(251, 191, 36, 0.18), transparent 72%);
+            pointer-events: none;
+        }
+
+        .cat-cover-badge {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            font-size: 0.66rem;
+            font-weight: 800;
+            color: var(--gold-bright);
+            background: rgba(7, 9, 14, 0.85);
+            border: 1px solid rgba(251, 191, 36, 0.32);
+            padding: 1px 7px;
+            border-radius: 99px;
+            z-index: 2;
         }
 
         .cat-card-art svg {
             width: 68px;
             height: 68px;
-            filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.55));
+            filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.65));
             transition: transform 0.25s ease;
-        }
-
-        .cat-card:hover .cat-card-art svg {
-            transform: scale(1.09);
+            z-index: 2;
         }
 
         .cat-flag-dot {
@@ -465,12 +485,13 @@
             bottom: 6px;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 0.92rem;
+            font-size: 0.9rem;
             line-height: 1;
-            background: rgba(7, 9, 14, 0.9);
+            background: rgba(7, 9, 14, 0.92);
             border: 1px solid var(--gold-dim);
             padding: 2px 8px;
             border-radius: 99px;
+            z-index: 2;
         }
 
         .cat-card-footer {
@@ -479,7 +500,7 @@
             color: var(--text-main);
             text-align: center;
             font-weight: 800;
-            font-size: 0.86rem;
+            font-size: 0.85rem;
             padding: 8px 6px;
             white-space: nowrap;
             overflow: hidden;
@@ -503,7 +524,7 @@
         }
 
         .dock-inner {
-            max-width: 1340px;
+            max-width: 1360px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
@@ -863,43 +884,6 @@
             background: rgba(34, 211, 238, 0.14);
         }
 
-        .lifeline-btn {
-            flex: 1;
-            min-width: 90px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--gold-dim);
-            border-radius: 10px;
-            padding: 6px 8px;
-            font-size: 0.78rem;
-            font-weight: 800;
-            color: var(--text-main);
-            cursor: pointer;
-            transition: all 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 4px;
-        }
-
-        .lifeline-btn:hover:not(:disabled) {
-            border-color: var(--gold-bright);
-            background: rgba(245, 158, 11, 0.2);
-            color: var(--gold-bright);
-        }
-
-        .lifeline-btn.armed {
-            background: linear-gradient(135deg, #fde047, #f59e0b);
-            color: #07090e;
-            border-color: #ffffff;
-            animation: pulseSoft 1.1s infinite;
-        }
-
-        .lifeline-btn:disabled {
-            opacity: 0.3;
-            text-decoration: line-through;
-            cursor: not-allowed;
-        }
-
         @keyframes pulseSoft {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.04); }
@@ -1072,7 +1056,7 @@
         .modal-card {
             background: linear-gradient(180deg, #131a2b 0%, #0b0f19 100%);
             border-radius: 26px;
-            max-width: 720px;
+            max-width: 740px;
             width: 100%;
             max-height: 92vh;
             overflow-y: auto;
@@ -1132,12 +1116,6 @@
             border-radius: 99px;
             font-size: 1.05rem;
             box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
-        }
-
-        .q-points-pill.doubled {
-            background: linear-gradient(135deg, #ef4444, #f59e0b);
-            color: #ffffff;
-            animation: pulseSoft 1s infinite;
         }
 
         /* Circular SVG Timer */
@@ -1231,96 +1209,12 @@
             background: rgba(255, 255, 255, 0.03);
             border-radius: 20px;
             padding: 24px 20px;
-            font-size: 1.38rem;
+            font-size: 1.35rem;
             font-weight: 800;
             line-height: 1.7;
             color: var(--text-main);
             border: 1px solid var(--gold-dim);
             margin-bottom: 16px;
-        }
-
-        /* Visual Card inside Question Modal */
-        .question-visual-stage {
-            position: relative;
-            background: radial-gradient(circle at top, rgba(245, 158, 11, 0.16), rgba(9, 13, 22, 0.96) 78%);
-            border: 1px solid var(--gold-dim);
-            border-radius: 20px;
-            padding: 14px;
-            margin-bottom: 16px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            transition: all 0.28s ease;
-            overflow: hidden;
-        }
-
-        .question-visual-stage.zoomed {
-            padding: 22px;
-            border-color: var(--neon-cyan);
-            box-shadow: 0 0 32px rgba(34, 211, 238, 0.22);
-            background: radial-gradient(circle at center, rgba(34, 211, 238, 0.16), rgba(9, 13, 22, 0.98) 82%);
-        }
-
-        .question-visual-canvas {
-            width: 100%;
-            max-width: 280px;
-            height: 145px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.28s ease;
-        }
-
-        .question-visual-stage.zoomed .question-visual-canvas {
-            max-width: 460px;
-            height: 230px;
-        }
-
-        .question-visual-canvas svg {
-            width: 100%;
-            height: 100%;
-            filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.65));
-            transition: transform 0.28s ease;
-        }
-
-        .question-visual-stage.zoomed .question-visual-canvas svg {
-            transform: scale(1.06);
-        }
-
-        .visual-toolbar {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 10px;
-            flex-wrap: wrap;
-            border-top: 1px dashed rgba(255, 255, 255, 0.08);
-            padding-top: 10px;
-        }
-
-        .visual-caption-tag {
-            font-size: 0.78rem;
-            font-weight: 800;
-            color: var(--gold-bright);
-        }
-
-        .zoom-visual-btn {
-            background: rgba(34, 211, 238, 0.12);
-            border: 1px solid rgba(34, 211, 238, 0.45);
-            color: var(--neon-cyan);
-            border-radius: 99px;
-            padding: 5px 14px;
-            font-size: 0.78rem;
-            font-weight: 800;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .zoom-visual-btn:hover {
-            background: var(--neon-cyan);
-            color: #07090e;
         }
 
         .hint-banner {
@@ -1359,109 +1253,188 @@
         .powers-banner-chips {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 10px;
-        }
-
-        .dual-choices-box {
-            background: rgba(15, 23, 42, 0.92);
-            border: 1px solid rgba(34, 211, 238, 0.45);
-            border-radius: 14px;
-            padding: 12px;
-            margin-top: 8px;
-        }
-
-        .dual-choices-title {
-            font-size: 0.84rem;
-            font-weight: 900;
-            color: var(--neon-cyan);
+            gap: 6px;
             margin-bottom: 8px;
         }
 
-        .dual-options-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
-        }
-
-        @media (max-width: 560px) {
-            .dual-options-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .dual-opt-btn {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.16);
-            color: var(--text-main);
-            border-radius: 12px;
-            padding: 10px 12px;
-            font-size: 0.88rem;
-            font-weight: 800;
-            cursor: pointer;
-            text-align: center;
-            transition: all 0.2s;
-        }
-
-        .dual-opt-btn:hover:not(:disabled) {
-            border-color: var(--neon-cyan);
-            background: rgba(34, 211, 238, 0.16);
-            color: #ffffff;
-        }
-
-        .dual-opt-btn.wrong-guess {
-            background: rgba(239, 68, 68, 0.2);
-            border-color: var(--crimson-alert);
-            color: #fca5a5;
-            text-decoration: line-through;
-        }
-
-        .dual-opt-btn.correct-guess {
-            background: rgba(16, 185, 129, 0.24);
-            border-color: var(--emerald-win);
-            color: #6ee7b7;
-        }
-
         .trap-trigger-btn {
-            background: linear-gradient(135deg, #eab308, #ca8a04);
+            background: linear-gradient(135deg, #f59e0b, #d97706);
             color: #07090e;
             border: none;
             border-radius: 10px;
-            padding: 6px 12px;
-            font-size: 0.78rem;
+            padding: 8px 14px;
+            font-size: 0.85rem;
             font-weight: 900;
             cursor: pointer;
             transition: 0.2s;
         }
 
         .trap-trigger-btn:hover {
+            filter: brightness(1.1);
             transform: translateY(-1px);
-            filter: brightness(1.08);
+        }
+
+        .answer-reveal-box {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.18), rgba(6, 95, 70, 0.35));
+            border: 1.5px solid var(--emerald-win);
+            color: #6ee7b7;
+            padding: 16px 20px;
+            border-radius: 16px;
+            font-size: 1.25rem;
+            font-weight: 900;
+            margin-bottom: 18px;
+            display: none;
+            box-shadow: 0 0 28px rgba(16, 185, 129, 0.25);
+        }
+
+        /* 4-Option Multiple Choice Grid (Paid Reveal -100 Points, Max 3 Attempts Per Team) */
+        .mcq-choices-section {
+            background: linear-gradient(180deg, rgba(19, 27, 46, 0.92), rgba(11, 16, 29, 0.97));
+            border: 1px solid var(--gold-dim);
+            border-radius: 20px;
+            padding: 16px;
+            margin-bottom: 18px;
+            text-align: right;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+        }
+
+        .mcq-choices-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+            font-size: 0.88rem;
+            font-weight: 900;
+            color: var(--gold-bright);
+        }
+
+        .reveal-options-btn {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 100%;
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.22), rgba(15, 23, 42, 0.96));
+            border: 1.5px solid var(--amber-orange);
+            color: #fdba74;
+            border-radius: 15px;
+            padding: 13px 18px;
+            font-size: 0.98rem;
+            font-weight: 900;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.22s ease;
+        }
+
+        .reveal-options-btn:hover:not(:disabled) {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(249, 115, 22, 0.35);
+        }
+
+        .reveal-options-btn:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+            border-color: rgba(148, 163, 184, 0.3);
+            color: var(--text-muted);
+        }
+
+        .mcq-options-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 580px) {
+            .mcq-options-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .mcq-option-btn {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 100%;
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.88), rgba(15, 23, 42, 0.96));
+            border: 1.5px solid rgba(245, 158, 11, 0.28);
+            color: var(--text-main);
+            border-radius: 15px;
+            padding: 13px 16px;
+            font-size: 0.98rem;
+            font-weight: 800;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-align: right;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+            transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .mcq-option-btn:hover:not(:disabled) {
+            border-color: var(--gold-bright);
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.24), rgba(30, 41, 59, 0.95));
+            transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(245, 158, 11, 0.25);
+        }
+
+        .mcq-option-letter {
+            width: 32px;
+            height: 32px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.25), rgba(249, 115, 22, 0.22));
+            border: 1px solid var(--gold-bright);
+            color: var(--gold-bright);
+            font-weight: 900;
+            font-size: 0.92rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        /* Never highlight or expose the right answer before explicit reveal */
+        .mcq-option-btn.picked-option {
+            border-color: var(--neon-cyan);
+            background: linear-gradient(135deg, rgba(34, 211, 238, 0.22), rgba(15, 23, 42, 0.96));
+            color: #e0f2fe;
+            box-shadow: 0 0 18px rgba(34, 211, 238, 0.25);
         }
 
         .reveal-btn {
-            background: linear-gradient(135deg, #1e293b, #334155);
+            appearance: none;
+            -webkit-appearance: none;
+            width: 100%;
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.18), rgba(30, 41, 59, 0.95));
             color: var(--gold-bright);
-            border: 1px solid var(--gold-dim);
-            padding: 12px 32px;
-            border-radius: 14px;
-            font-size: 1.02rem;
+            border: 1.5px solid var(--gold-bright);
+            padding: 13px 28px;
+            border-radius: 15px;
+            font-size: 1.05rem;
             font-weight: 900;
             cursor: pointer;
-            margin-bottom: 18px;
-            transition: 0.2s;
+            margin-bottom: 14px;
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.18);
+            transition: all 0.2s ease;
         }
 
         .reveal-btn:hover {
-            background: var(--gold-bright);
+            background: linear-gradient(135deg, #fde047, #f59e0b);
             color: #07090e;
             transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.42);
         }
 
         .award-buttons-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 10px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 4px;
         }
 
         @media (max-width: 600px) {
@@ -1471,33 +1444,41 @@
         }
 
         .award-btn {
-            padding: 14px 10px;
-            border-radius: 14px;
-            border: none;
+            appearance: none;
+            -webkit-appearance: none;
+            width: 100%;
+            padding: 14px 12px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.16);
             font-weight: 900;
-            font-size: 0.95rem;
+            font-size: 0.98rem;
             cursor: pointer;
             color: #ffffff;
-            transition: transform 0.15s, filter 0.2s;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+            transition: transform 0.18s ease, filter 0.2s ease, box-shadow 0.2s ease;
         }
 
         .award-btn:hover {
             transform: translateY(-2px);
-            filter: brightness(1.1);
+            filter: brightness(1.12);
         }
 
         .award-btn.t1 {
-            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            border-color: rgba(147, 197, 253, 0.45);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
         }
 
         .award-btn.t2 {
             background: linear-gradient(135deg, #f97316, #c2410c);
+            border-color: rgba(253, 186, 116, 0.45);
+            box-shadow: 0 6px 20px rgba(234, 88, 12, 0.35);
         }
 
         .award-btn.none {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid var(--border-subtle);
-            color: var(--text-muted);
+            background: linear-gradient(135deg, rgba(51, 65, 85, 0.75), rgba(30, 41, 59, 0.9));
+            border-color: rgba(148, 163, 184, 0.3);
+            color: #cbd5e1;
         }
 
         /* Confetti & Winner */
@@ -1584,8 +1565,8 @@
     <header class="top-header">
         <div class="header-inner">
             <div class="brand-logo" onclick="returnToSetup(event)">
-                <span class="brand-badge">👑 سين جيم</span>
-                <span class="brand-sub">Royal VIP Edition</span>
+                <span class="brand-badge">👑 اك جيم</span>
+                <span class="brand-sub">ROYAL VIP EDITION</span>
             </div>
 
             <div class="header-controls" id="setupHeaderControls">
@@ -1612,23 +1593,21 @@
     <!-- SCREEN 1: CATEGORY SELECTION -->
     <main class="main-wrapper screen active" id="setupScreen">
         <div class="setup-hero">
-            <h1>سين جيم // Royal VIP Edition</h1>
-            <p>اختر 6 فئات (3 لكل فريق) — كل فئة تضم 6 أسئلة بقيم 200، 400، و 600 نقطة</p>
+            <h1>اك جيم // Royal VIP Edition</h1>
+            <p>اختر 6 فئات (3 لكل فريق) — كل فئة تضم 50 سؤالاً نصياً متنوعاً مع تلميحات وخيارات (3 محاولات لإظهار الخيارات بـ -100 نقطة لكل فريق، ومستويات 200 سهل • 600 وسط • 800 صعب)</p>
         </div>
 
         <div id="sectionsContainer"></div>
 
         <div class="bottom-setup-dock">
             <div class="dock-inner">
-                <div class="selected-preview-strip" id="selectedPreviewStrip">
-                    <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700;">الفئات المختارة ستظهر هنا...</span>
-                </div>
+                <div class="selected-preview-strip" id="selectedPreviewStrip"></div>
 
                 <div class="dock-main-row">
                     <div class="teams-inputs">
                         <div class="team-input-group">
                             <label for="gameNameInput">البطولة:</label>
-                            <input type="text" id="gameNameInput" value="ديوانية سين جيم VIP" maxlength="24">
+                            <input type="text" id="gameNameInput" value="بطولة اك جيم VIP" maxlength="24">
                         </div>
                         <div class="team-input-group t1">
                             <span class="team-dot" style="background: var(--team1-blue);"></span>
@@ -1676,13 +1655,13 @@
                     <button type="button" class="lifeline-btn" id="t1-sitback" onclick="useSitBackPower(1)" title="تجميد الفريق المنافس في السؤال الحالي"><span class="ll-icon">✋</span><span>استريح</span></button>
                     <button type="button" class="lifeline-btn" id="t1-pit" onclick="usePitPower(1)" title="فتح حفرة النقاط على هذا السؤال"><span class="ll-icon">🕳️</span><span>الحفرة</span></button>
                     <button type="button" class="lifeline-btn" id="t1-call" onclick="useCallFriend(1)" title="استشارة صديق لمدة 30 ثانية"><span class="ll-icon">📞</span><span>اتصال بصديق</span></button>
-                    <button type="button" class="lifeline-btn" id="t1-twoans" onclick="useTwoAnswersPower(1)" title="محاولتان أو خياران للإجابة"><span class="ll-icon">✌️</span><span>جاوب جوابين</span></button>
+                    <button type="button" class="lifeline-btn" id="t1-twoans" onclick="useTwoAnswersPower(1)" title="محاولتان للإجابة"><span class="ll-icon">✌️</span><span>جاوب جوابين</span></button>
                 </div>
                 <div class="power-status-strip" id="t1PowerStatus"></div>
             </div>
 
             <div class="board-center-info">
-                <div class="game-room-title" id="boardGameTitle">ديوانية سين جيم VIP</div>
+                <div class="game-room-title" id="boardGameTitle">بطولة اك جيم VIP</div>
                 <div style="font-size: 0.85rem; font-weight: 800; color: var(--text-muted);" id="remainingQuestionsText">
                     الأسئلة المتبقية: 36 / 36
                 </div>
@@ -1706,7 +1685,7 @@
                     <button type="button" class="lifeline-btn" id="t2-sitback" onclick="useSitBackPower(2)" title="تجميد الفريق المنافس في السؤال الحالي"><span class="ll-icon">✋</span><span>استريح</span></button>
                     <button type="button" class="lifeline-btn" id="t2-pit" onclick="usePitPower(2)" title="فتح حفرة النقاط على هذا السؤال"><span class="ll-icon">🕳️</span><span>الحفرة</span></button>
                     <button type="button" class="lifeline-btn" id="t2-call" onclick="useCallFriend(2)" title="استشارة صديق لمدة 30 ثانية"><span class="ll-icon">📞</span><span>اتصال بصديق</span></button>
-                    <button type="button" class="lifeline-btn" id="t2-twoans" onclick="useTwoAnswersPower(2)" title="محاولتان أو خياران للإجابة"><span class="ll-icon">✌️</span><span>جاوب جوابين</span></button>
+                    <button type="button" class="lifeline-btn" id="t2-twoans" onclick="useTwoAnswersPower(2)" title="محاولتان للإجابة"><span class="ll-icon">✌️</span><span>جاوب جوابين</span></button>
                 </div>
                 <div class="power-status-strip" id="t2PowerStatus"></div>
             </div>
@@ -1723,7 +1702,7 @@
             <h3 id="infoModalTitle" style="font-size: 1.4rem; font-weight: 900; color: var(--gold-bright); margin-bottom: 8px;"></h3>
             <p id="infoModalDesc" style="color: var(--text-muted); font-size: 0.96rem; line-height: 1.65; margin-bottom: 14px;"></p>
             <div style="background: rgba(255,255,255,0.04); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 10px; font-size: 0.84rem; color: var(--neon-cyan); font-weight: 800; margin-bottom: 18px;">
-                6 أسئلة متدرجة: 200 • 400 • 600 نقطة
+                50 سؤالاً متدرجاً: 200 (سهل) • 600 (وسط) • 800 (صعب)
             </div>
             <button type="button" class="start-game-btn" style="width: 100%;" onclick="closeModal('infoModal')">تمام</button>
         </div>
@@ -1744,7 +1723,7 @@
     <!-- QUESTION MODAL -->
     <div class="modal-backdrop" id="questionModal">
         <div class="modal-card">
-            <button type="button" class="modal-close-x" onclick="closeQuestionWithoutScoring()" title="إغلاق مؤقت">✕</button>
+            <button type="button" class="modal-close-x" onclick="closeQuestionWithoutScoring()" title="إغلاق السؤال">✕</button>
 
             <div class="q-modal-top">
                 <span class="q-cat-pill" id="qModalCategory">اسم الفئة</span>
@@ -1766,35 +1745,35 @@
                         <button type="button" class="timer-ctrl-btn" onclick="addTimerSeconds(15)">➕ 15 ثانية</button>
                         <button type="button" class="timer-ctrl-btn" onclick="resetQuestionTimer()">🔄 إعادة</button>
                         <button type="button" class="timer-ctrl-btn" onclick="startStealTimer()">⚡ وقت الخصم (15ث)</button>
+                        <button type="button" class="timer-ctrl-btn" onclick="showQuestionHint()">💡 تلميح</button>
                     </div>
                 </div>
             </div>
 
             <div class="question-text-box" id="qModalText">نص السؤال هنا</div>
 
+            <div class="hint-banner" id="qHintBanner"></div>
+
+            <!-- 4 Multiple Choice Options Box (Hidden Behind Paid Reveal Button) -->
+            <div class="mcq-choices-section" id="mcqChoicesSection">
+                <div class="mcq-choices-header">
+                    <span>🎯 الخيارات الأربعة:</span>
+                    <span id="mcqAttemptBadge" style="color: var(--neon-cyan); font-size: 0.8rem;">مخفية — يكلف إظهارها 100 نقطة (3 محاولات لكل فريق)</span>
+                </div>
+                <button type="button" class="reveal-options-btn" id="revealOptionsBtn" onclick="revealQuestionOptionsWithCost()">
+                    🔓 إظهار الخيارات (-100 نقطة)
+                </button>
+                <div class="mcq-options-grid" id="mcqOptionsGrid" style="display: none;"></div>
+            </div>
+
             <!-- Interactive Powers Banner inside Question Modal -->
             <div class="powers-active-banner" id="powersActiveBanner">
                 <div class="powers-banner-title">⚡ القدرات والوسائل المفعّلة على هذا السؤال:</div>
                 <div class="powers-banner-chips" id="powersBannerChips"></div>
-                <div id="trapActionArea" style="display: none; margin-bottom: 8px;"></div>
-                <div class="dual-choices-box" id="dualChoicesBox" style="display: none;">
-                    <div class="dual-choices-title" id="dualChoicesTitle">✌️ جاوب جوابين — اختر أحد الخيارين أو جرّب محاولتك الأولى:</div>
-                    <div class="dual-options-grid" id="dualOptionsGrid"></div>
-                </div>
+                <div id="trapActionArea" style="display: none; margin-top: 6px;"></div>
             </div>
 
-            <!-- Visual Illustration Card with Zoom Toggle -->
-            <div class="question-visual-stage" id="questionVisualStage">
-                <div class="question-visual-canvas" id="questionVisualCanvas"></div>
-                <div class="visual-toolbar">
-                    <span class="visual-caption-tag" id="questionVisualCaption">بطاقة بصرية تفاعلية</span>
-                    <button type="button" class="zoom-visual-btn" id="zoomVisualBtn" onclick="toggleVisualZoom()">
-                        🔍 عرض الصورة / التكبير
-                    </button>
-                </div>
-            </div>
-
-            <div class="hint-banner" id="qHintBanner"></div>
+            <!-- Answer remains hidden until user clicks 'إظهار الإجابة' -->
             <div class="answer-reveal-box" id="qAnswerBox">الإجابة الصحيحة</div>
 
             <button type="button" class="reveal-btn" id="revealAnswerBtn" onclick="revealAnswer()">👁️ إظهار الإجابة</button>
@@ -1908,574 +1887,628 @@
             showToast(active ? "تم تشغيل المؤثرات الصوتية" : "تم كتم المؤثرات الصوتية");
         }
 
-        /* ================= BASE SVG ICONS ================= */
+        /* ================= INLINE SVG CATEGORY ICONS ================= */
         const ICONS = {
-            reptiles: `<svg viewBox="0 0 80 80"><path d="M12 54 Q26 26 42 44 T68 24" fill="none" stroke="#10b981" stroke-width="7" stroke-linecap="round"/><circle cx="69" cy="23" r="6.5" fill="#34d399" stroke="#fbbf24" stroke-width="1.5"/><circle cx="71" cy="21" r="2" fill="#07090e"/></svg>`,
-            dec2: `<svg viewBox="0 0 80 80"><rect x="16" y="12" width="4" height="56" rx="2" fill="#fbbf24"/><rect x="20" y="16" width="40" height="10" fill="#10b981"/><rect x="20" y="26" width="40" height="10" fill="#f8fafc"/><rect x="20" y="36" width="40" height="10" fill="#0f172a"/><rect x="20" y="16" width="12" height="30" fill="#ef4444"/></svg>`,
-            uaeLogos: `<svg viewBox="0 0 80 80"><polygon points="40,10 20,66 60,66" fill="none" stroke="#fbbf24" stroke-width="4"/><circle cx="40" cy="44" r="10" fill="rgba(34,211,238,0.2)" stroke="#22d3ee" stroke-width="2.5"/></svg>`,
-            uaeMalls: `<svg viewBox="0 0 80 80"><rect x="14" y="24" width="52" height="38" rx="6" fill="#1e293b" stroke="#fbbf24" stroke-width="2.5"/><path d="M30 62 V42 A10 10 0 0 1 50 42 V62" fill="none" stroke="#22d3ee" stroke-width="3"/></svg>`,
-            uaeGirls: `<svg viewBox="0 0 80 80"><polygon points="40,12 48,30 68,32 53,45 58,64 40,54 22,64 27,45 12,32 32,30" fill="#fbbf24"/></svg>`,
-            jamaiya: `<svg viewBox="0 0 80 80"><path d="M14 22 H22 L30 50 H58 L64 28 H25" fill="none" stroke="#22d3ee" stroke-width="3.5" stroke-linecap="round"/><circle cx="34" cy="60" r="4.5" fill="#fbbf24"/><circle cx="54" cy="60" r="4.5" fill="#fbbf24"/></svg>`,
-            uaeFood: `<svg viewBox="0 0 80 80"><path d="M18 40 C18 20, 62 20, 62 40 Z" fill="#f59e0b"/><rect x="14" y="42" width="52" height="7" rx="3.5" fill="#10b981"/><path d="M22 52 H58 L53 62 H27 Z" fill="#ea580c"/></svg>`,
-            uae: `<svg viewBox="0 0 80 80"><polygon points="40,10 34,64 46,64" fill="#fbbf24"/><path d="M14 64 Q40 38 66 64 Z" fill="#f97316"/></svg>`,
-            cinema: `<svg viewBox="0 0 80 80"><rect x="15" y="28" width="50" height="34" rx="5" fill="#1e293b" stroke="#fbbf24" stroke-width="2.5"/><polygon points="15,28 65,18 62,10 12,20" fill="#f59e0b"/><polygon points="35,38 35,52 49,45" fill="#22d3ee"/></svg>`,
-            riddles: `<svg viewBox="0 0 80 80"><circle cx="36" cy="36" r="18" fill="rgba(34,211,238,0.15)" stroke="#22d3ee" stroke-width="3.5"/><line x1="50" y1="50" x2="66" y2="66" stroke="#fbbf24" stroke-width="6" stroke-linecap="round"/><text x="36" y="42" text-anchor="middle" fill="#fbbf24" font-size="18" font-weight="900">؟</text></svg>`,
-            world: `<svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="24" fill="#0369a1" stroke="#fbbf24" stroke-width="2.5"/><path d="M26 24 Q38 32 30 46 Q22 54 34 62 M46 22 Q58 34 48 48 Q56 58 46 64" stroke="#10b981" stroke-width="7" fill="none" stroke-linecap="round"/></svg>`,
-            general: `<svg viewBox="0 0 80 80"><polygon points="40,12 66,26 66,54 40,68 14,54 14,26" fill="rgba(245,158,11,0.15)" stroke="#fbbf24" stroke-width="3"/><circle cx="40" cy="40" r="10" fill="#22d3ee"/></svg>`,
-            football: `<svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="24" fill="#f8fafc" stroke="#fbbf24" stroke-width="2.5"/><polygon points="40,28 50,36 46,48 34,48 30,36" fill="#0f172a"/></svg>`,
-            islamic: `<svg viewBox="0 0 80 80"><path d="M48 16 A24 24 0 1 0 58 58 A19 19 0 1 1 48 16 Z" fill="#fbbf24"/></svg>`,
-            games: `<svg viewBox="0 0 80 80"><rect x="14" y="24" width="52" height="32" rx="14" fill="#1e293b" stroke="#22d3ee" stroke-width="2.5"/><circle cx="28" cy="40" r="6" fill="#fbbf24"/><circle cx="52" cy="36" r="3.5" fill="#10b981"/><circle cx="46" cy="44" r="3.5" fill="#f97316"/></svg>`
+            respect: `<svg viewBox="0 0 96 96">
+                <polygon points="48,10 78,24 78,50 C78,68 64,79 48,86 C32,79 18,68 18,50 V24 Z" fill="rgba(245,158,11,0.22)" stroke="#fbbf24" stroke-width="3.5"/>
+                <text x="48" y="57" text-anchor="middle" fill="#fde047" font-size="27" font-weight="900">RP</text>
+            </svg>`,
+            mystery: `<svg viewBox="0 0 96 96">
+                <rect x="18" y="34" width="18" height="46" rx="4" fill="#0f172a" stroke="#22d3ee" stroke-width="2.5"/>
+                <rect x="39" y="20" width="20" height="60" rx="4" fill="#1e293b" stroke="#fbbf24" stroke-width="2.5"/>
+                <rect x="62" y="38" width="16" height="42" rx="4" fill="#0f172a" stroke="#a855f7" stroke-width="2.5"/>
+                <circle cx="49" cy="46" r="11" fill="rgba(251,191,36,0.22)" stroke="#fbbf24" stroke-width="2"/>
+                <text x="49" y="52" text-anchor="middle" fill="#fde047" font-size="16" font-weight="900">?</text>
+            </svg>`,
+            falcons: `<svg viewBox="0 0 96 96">
+                <circle cx="48" cy="48" r="34" fill="rgba(16,185,129,0.2)" stroke="#34d399" stroke-width="2.5"/>
+                <path d="M22 54 C28 26, 58 18, 76 30 C62 32, 54 42, 66 52 C50 52, 40 62, 42 76 C28 68, 20 64, 22 54 Z" fill="#10b981" stroke="#a7f3d0" stroke-width="2"/>
+            </svg>`,
+            power: `<svg viewBox="0 0 96 96">
+                <circle cx="48" cy="48" r="34" fill="rgba(249,115,22,0.22)" stroke="#fb923c" stroke-width="2.5"/>
+                <polygon points="52,14 24,52 44,52 40,82 72,42 50,42" fill="#f97316" stroke="#fde047" stroke-width="2.5"/>
+            </svg>`,
+            dec2: `<svg viewBox="0 0 96 96">
+                <rect x="14" y="22" width="68" height="52" rx="8" fill="#1e293b" stroke="#fbbf24" stroke-width="2.5"/>
+                <rect x="14" y="22" width="18" height="52" rx="4" fill="#dc2626"/>
+                <rect x="32" y="22" width="50" height="17" fill="#16a34a"/>
+                <rect x="32" y="39" width="50" height="18" fill="#f8fafc"/>
+                <rect x="32" y="57" width="50" height="17" fill="#0f172a"/>
+                <circle cx="48" cy="14" r="7" fill="#fbbf24"/>
+            </svg>`,
+            uaeLogos: `<svg viewBox="0 0 96 96">
+                <polygon points="48,10 55,82 41,82" fill="#fbbf24" stroke="#fde047" stroke-width="2"/>
+                <line x1="48" y1="10" x2="48" y2="2" stroke="#22d3ee" stroke-width="3"/>
+                <circle cx="72" cy="24" r="10" fill="rgba(34,211,238,0.25)" stroke="#22d3ee" stroke-width="2"/>
+            </svg>`,
+            uaeMalls: `<svg viewBox="0 0 96 96">
+                <rect x="16" y="26" width="64" height="50" rx="8" fill="#1e293b" stroke="#fbbf24" stroke-width="2.5"/>
+                <path d="M36 76 V52 C36 45 60 45 60 52 V76" fill="rgba(251,191,36,0.2)" stroke="#fbbf24" stroke-width="2.5"/>
+                <circle cx="48" cy="18" r="8" fill="#22d3ee"/>
+            </svg>`,
+            uaeGirls: `<svg viewBox="0 0 96 96">
+                <polygon points="48,14 57,35 80,37 62,52 68,75 48,62 28,75 34,52 16,37 39,35" fill="#fbbf24" stroke="#fde047" stroke-width="2"/>
+            </svg>`,
+            jamaiya: `<svg viewBox="0 0 96 96">
+                <rect x="20" y="28" width="56" height="48" rx="8" fill="#1e293b" stroke="#34d399" stroke-width="2.5"/>
+                <path d="M34 28 V20 C34 12 62 12 62 20 V28" fill="none" stroke="#fbbf24" stroke-width="3"/>
+                <circle cx="48" cy="52" r="10" fill="rgba(52,211,153,0.25)" stroke="#34d399" stroke-width="2"/>
+            </svg>`,
+            uaeFood: `<svg viewBox="0 0 96 96">
+                <ellipse cx="48" cy="56" rx="30" ry="16" fill="#1e293b" stroke="#fbbf24" stroke-width="2.5"/>
+                <path d="M24 52 C24 30, 72 30, 72 52" fill="rgba(249,115,22,0.25)" stroke="#fb923c" stroke-width="2.5"/>
+                <path d="M36 22 Q40 14 36 8 M50 22 Q54 14 50 8" stroke="#22d3ee" stroke-width="2.5" fill="none"/>
+            </svg>`,
+            uae: `<svg viewBox="0 0 96 96">
+                <circle cx="48" cy="48" r="34" fill="rgba(245,158,11,0.16)" stroke="#fbbf24" stroke-width="2.5"/>
+                <path d="M22 58 Q48 36 74 58" fill="none" stroke="#22d3ee" stroke-width="3"/>
+                <polygon points="48,20 53,34 43,34" fill="#fbbf24"/>
+            </svg>`,
+            reptiles: `<svg viewBox="0 0 96 96">
+                <path d="M20 62 C26 30, 52 24, 68 38 C76 45, 74 62, 56 64 C42 66, 36 52, 46 46" fill="none" stroke="#34d399" stroke-width="5" stroke-linecap="round"/>
+                <circle cx="71" cy="39" r="3.5" fill="#fde047"/>
+            </svg>`,
+            cinema: `<svg viewBox="0 0 96 96">
+                <rect x="16" y="34" width="64" height="42" rx="7" fill="#1e293b" stroke="#fbbf24" stroke-width="2.5"/>
+                <polygon points="18,34 74,18 78,30 22,45" fill="#f59e0b"/>
+                <polygon points="42,47 58,55 42,63" fill="#22d3ee"/>
+            </svg>`,
+            riddles: `<svg viewBox="0 0 96 96">
+                <circle cx="48" cy="48" r="34" fill="rgba(34,211,238,0.15)" stroke="#22d3ee" stroke-width="2.5"/>
+                <text x="48" y="61" text-anchor="middle" fill="#fde047" font-size="38" font-weight="900">؟</text>
+            </svg>`,
+            world: `<svg viewBox="0 0 96 96">
+                <circle cx="48" cy="48" r="33" fill="rgba(59,130,246,0.22)" stroke="#60a5fa" stroke-width="2.5"/>
+                <ellipse cx="48" cy="48" rx="16" ry="33" fill="none" stroke="#22d3ee" stroke-width="2"/>
+                <line x1="15" y1="48" x2="81" y2="48" stroke="#fbbf24" stroke-width="2"/>
+            </svg>`,
+            general: `<svg viewBox="0 0 96 96">
+                <circle cx="48" cy="48" r="33" fill="rgba(245,158,11,0.18)" stroke="#fbbf24" stroke-width="2.5"/>
+                <polygon points="48,22 55,39 73,41 59,53 63,71 48,61 33,71 37,53 23,41 41,39" fill="#fbbf24"/>
+            </svg>`,
+            islamic: `<svg viewBox="0 0 96 96">
+                <path d="M58 20 A28 28 0 1 0 74 64 A22 22 0 1 1 58 20 Z" fill="#fbbf24" stroke="#fde047" stroke-width="2"/>
+                <circle cx="68" cy="26" r="5" fill="#22d3ee"/>
+            </svg>`,
+            football: `<svg viewBox="0 0 96 96">
+                <circle cx="48" cy="48" r="33" fill="#0f172a" stroke="#fbbf24" stroke-width="2.5"/>
+                <polygon points="48,32 61,42 56,58 40,58 35,42" fill="#f8fafc" stroke="#0f172a" stroke-width="2"/>
+            </svg>`,
+            sports: `<svg viewBox="0 0 96 96">
+                <path d="M28 22 H68 V40 C68 54 58 62 48 64 C38 62 28 54 28 40 Z" fill="rgba(245,158,11,0.25)" stroke="#fbbf24" stroke-width="2.5"/>
+                <rect x="42" y="64" width="12" height="12" fill="#fbbf24"/>
+                <rect x="32" y="76" width="32" height="6" rx="3" fill="#22d3ee"/>
+            </svg>`,
+            games: `<svg viewBox="0 0 96 96">
+                <rect x="14" y="30" width="68" height="38" rx="16" fill="#1e293b" stroke="#22d3ee" stroke-width="2.5"/>
+                <circle cx="34" cy="49" r="4" fill="#fbbf24"/>
+                <circle cx="62" cy="44" r="4" fill="#f97316"/>
+                <circle cx="62" cy="54" r="4" fill="#34d399"/>
+            </svg>`
         };
 
-        /* ================= DEDICATED SVG ARTWORK GENERATOR ================= */
         function renderCategoryArt(cat, size = 68) {
-            const name = (cat && cat.name) ? String(cat.name) : "";
-            const id = (cat && cat.id) ? String(cat.id) : "";
-
-            if (id.includes("rep_") || id.includes("reptiles") || name.includes("زواحف") || name.includes("أفاعي") || name.includes("سحالي") || name.includes("سلاحف")) {
-                if (name.includes("أفاعي") || name.includes("ثعابين")) {
-                    return `<svg width="${size}" height="${size}" viewBox="0 0 96 96">
-                        <path d="M16 68 C26 42, 42 74, 54 50 C64 30, 72 44, 78 30" fill="none" stroke="#10b981" stroke-width="9" stroke-linecap="round"/>
-                        <ellipse cx="81" cy="28" rx="9" ry="6" transform="rotate(-22 81 28)" fill="#34d399" stroke="#fbbf24" stroke-width="1.5"/>
-                        <circle cx="83" cy="25" r="2" fill="#07090e"/>
-                        <path d="M89 27 L94 25 M89 27 L94 30" stroke="#f87171" stroke-width="2" stroke-linecap="round"/>
-                    </svg>`;
-                }
-                if (name.includes("سحالي") || name.includes("حرباء")) {
-                    return `<svg width="${size}" height="${size}" viewBox="0 0 96 96">
-                        <path d="M18 66 Q32 76 42 60 L64 46 L76 34" fill="none" stroke="#22d3ee" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M36 58 L30 74 M56 50 L62 68 M48 53 L52 38 L58 42" stroke="#fbbf24" stroke-width="4" stroke-linecap="round"/>
-                        <circle cx="78" cy="32" r="8" fill="#10b981" stroke="#fde047" stroke-width="1.5"/>
-                        <circle cx="80" cy="30" r="3" fill="#07090e"/>
-                    </svg>`;
-                }
-                if (name.includes("سلاحف") || name.includes("تماسيح")) {
-                    return `<svg width="${size}" height="${size}" viewBox="0 0 96 96">
-                        <path d="M24 56 C24 32, 68 32, 68 56 Z" fill="#10b981" stroke="#fbbf24" stroke-width="2.5"/>
-                        <path d="M34 56 L42 38 M58 56 L50 38 M26 48 H66" stroke="#065f46" stroke-width="2.5"/>
-                        <rect x="20" y="56" width="56" height="7" rx="3.5" fill="#d97706"/>
-                        <circle cx="76" cy="50" r="6" fill="#34d399"/><circle cx="78" cy="48" r="1.8" fill="#07090e"/>
-                    </svg>`;
-                }
-                return `<svg width="${size}" height="${size}" viewBox="0 0 96 96">
-                    <path d="M16 64 Q30 34 48 52 T80 30" fill="none" stroke="#10b981" stroke-width="8" stroke-linecap="round"/>
-                    <path d="M26 52 L32 45 M40 48 L46 41 M56 44 L62 37" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
-                    <circle cx="81" cy="29" r="7.5" fill="#34d399" stroke="#fbbf24" stroke-width="1.5"/>
-                    <circle cx="83" cy="27" r="2.2" fill="#07090e"/>
-                </svg>`;
-            }
-
-            if (id.includes("uae_") || name.includes("إمارات") || name.includes("ديسمبر") || name.includes("الجمعية") || name.includes("مطاعم")) {
-                if (id.includes("2dec") || name.includes("ديسمبر")) {
-                    return `<svg width="${size}" height="${size}" viewBox="0 0 96 96">
-                        <rect x="20" y="14" width="5" height="68" rx="2.5" fill="#fbbf24"/>
-                        <rect x="25" y="18" width="48" height="12" fill="#10b981"/>
-                        <rect x="25" y="30" width="48" height="12" fill="#f8fafc"/>
-                        <rect x="25" y="42" width="48" height="12" fill="#0f172a"/>
-                        <rect x="25" y="18" width="14" height="36" fill="#ef4444"/>
-                        <circle cx="68" cy="68" r="11" fill="rgba(251,191,36,0.18)" stroke="#fbbf24" stroke-width="2"/>
-                        <text x="68" y="72" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="900">2/12</text>
-                    </svg>`;
-                }
-                if (name.includes("مجمعات")) {
-                    return `<svg width="${size}" height="${size}" viewBox="0 0 96 96">
-                        <rect x="16" y="28" width="64" height="46" rx="8" fill="#1e293b" stroke="#fbbf24" stroke-width="2.5"/>
-                        <path d="M36 74 V48 A12 12 0 0 1 60 48 V74" fill="none" stroke="#22d3ee" stroke-width="3.5"/>
-                        <polygon points="48,12 28,28 68,28" fill="#f59e0b"/>
-                    </svg>`;
-                }
-                if (name.includes("بنات")) {
-                    return `<svg width="${size}" height="${size}" viewBox="0 0 96 96">
-                        <path d="M24 42 H72 L67 74 H29 Z" fill="#f59e0b" stroke="#fde047" stroke-width="2"/>
-                        <path d="M35 42 C35 22, 61 22, 61 42" fill="none" stroke="#22d3ee" stroke-width="4"/>
-                        <polygon points="48,49 52,57 60,57 54,62 56,70 48,65 40,70 42,62 36,57 44,57" fill="#07090e"/>
-                    </svg>`;
-                }
-                if (name.includes("الجمعية")) {
-                    return `<svg width="${size}" height="${size}" viewBox="0 0 96 96">
-                        <path d="M16 26 H26 L35 60 H68 L76 34 H29" fill="none" stroke="#22d3ee" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="40" cy="70" r="5" fill="#fbbf24"/><circle cx="63" cy="70" r="5" fill="#fbbf24"/>
-                        <rect x="42" y="22" width="14" height="10" rx="2" fill="#10b981"/>
-                    </svg>`;
-                }
-                if (name.includes("مطاعم")) {
-                    return `<svg width="${size}" height="${size}" viewBox="0 0 96 96">
-                        <path d="M22 46 C22 24, 74 24, 74 46 Z" fill="#f59e0b" stroke="#fde047" stroke-width="2"/>
-                        <circle cx="48" cy="21" r="3" fill="#fbbf24"/>
-                        <rect x="16" y="48" width="64" height="8" rx="4" fill="#10b981"/>
-                        <path d="M26 59 H70 L64 70 H32 Z" fill="#ea580c"/>
-                    </svg>`;
-                }
-                return `<svg width="${size}" height="${size}" viewBox="0 0 96 96">
-                    <polygon points="48,10 41,74 55,74" fill="#fbbf24"/>
-                    <path d="M16 74 Q48 44 80 74 Z" fill="#f97316"/>
-                    <circle cx="24" cy="28" r="7" fill="none" stroke="#22d3ee" stroke-width="2.5"/>
-                </svg>`;
-            }
-
-            if (cat && cat.icon) {
-                return cat.icon.replace(/viewBox="0 0 80 80"/, `width="${size}" height="${size}" viewBox="0 0 80 80"`);
-            }
-
-            return `<svg width="${size}" height="${size}" viewBox="0 0 96 96">
-                <polygon points="48,14 78,31 78,65 48,82 18,65 18,31" fill="rgba(245,158,11,0.14)" stroke="#fbbf24" stroke-width="3"/>
-                <circle cx="48" cy="48" r="12" fill="#22d3ee"/>
-            </svg>`;
+            const raw = (cat && cat.icon) ? cat.icon : ICONS.general;
+            return raw.replace('<svg ', `<svg width="${size}" height="${size}" `);
         }
 
-        function renderQuestionVisual(question, cat) {
-            const catName = (cat && cat.name) ? String(cat.name) : "";
-            const catId = (cat && cat.id) ? String(cat.id) : "";
-            const qText = (question && question.q) ? String(question.q) : "";
-            const pts = (question && question.points) ? question.points : 200;
+        function getCategoryCoverTag(sectionTitle) {
+            const map = {
+                "سيرفرات وكلانات": "VIP CLAN",
+                "الإمارات": "UAE EDITION",
+                "كائنات الزواحف": "WILDLIFE",
+                "فن أجنبي": "CINEMA & TV",
+                "تفكير وألغاز": "BRAIN",
+                "دول العالم": "WORLD",
+                "عام": "200•600•800",
+                "إسلامي": "ISLAMIC",
+                "كرة قدم": "FOOTBALL",
+                "رياضة": "SPORTS",
+                "ألعاب": "GAMING"
+            };
+            return map[sectionTitle] || "50 Qs";
+        }
 
-            let badgeText = `بطاقة ${catName} • ${pts} نقطة`;
-            let artSvg = renderCategoryArt(cat, 130);
+        /* ================= QUESTION BANK BUILDER (50 QUESTIONS x 4 OPTIONS, 200/600/800) ================= */
+        const GENERIC_DISTRACTORS = [
+            "الخيار البديل الأول",
+            "المعلومة التاريخية الأخرى",
+            "المصطلح المشابه في الفئة",
+            "الرمز التقليدي المعروف",
+            "الإجابة الثانية المحتملة",
+            "المعلم الشهير الآخر",
+            "الاسم الشائع في المنطقة",
+            "الحدث الموازي في نفس الفترة"
+        ];
 
-            if (catId.includes("rep_") || qText.includes("أفعى") || qText.includes("حرباء") || qText.includes("سلحفاة") || qText.includes("تمساح") || qText.includes("كومودو")) {
-                badgeText = `🦎 بطاقة الزواحف — ${catName}`;
-                artSvg = `<svg viewBox="0 0 260 140">
-                    <rect x="12" y="10" width="236" height="120" rx="18" fill="rgba(16,185,129,0.08)" stroke="rgba(52,211,153,0.4)" stroke-width="2"/>
-                    <path d="M28 104 Q72 52 126 88 T216 54" fill="none" stroke="#10b981" stroke-width="10" stroke-linecap="round"/>
-                    <circle cx="220" cy="52" r="11" fill="#34d399" stroke="#fbbf24" stroke-width="2"/>
-                    <circle cx="223" cy="49" r="3" fill="#07090e"/>
-                    <text x="72" y="36" fill="#6ee7b7" font-size="13" font-weight="900">REPTILE FILE #${pts}</text>
-                </svg>`;
-            } else if (catId.includes("uae_") || catName.includes("إمارات") || catName.includes("ديسمبر")) {
-                badgeText = `🇦🇪 بطاقة الإمارات — ${catName}`;
-                artSvg = `<svg viewBox="0 0 260 140">
-                    <rect x="12" y="10" width="236" height="120" rx="18" fill="rgba(245,158,11,0.09)" stroke="rgba(251,191,36,0.45)" stroke-width="2"/>
-                    <polygon points="130,22 120,108 140,108" fill="#fbbf24"/>
-                    <path d="M32 110 Q130 66 228 110 Z" fill="#f97316" opacity="0.85"/>
-                    <rect x="34" y="24" width="44" height="8" fill="#10b981"/>
-                    <rect x="34" y="32" width="44" height="8" fill="#f8fafc"/>
-                    <rect x="34" y="40" width="44" height="8" fill="#0f172a"/>
-                    <rect x="34" y="24" width="12" height="24" fill="#ef4444"/>
-                </svg>`;
+        function buildOptionsList(correctAnswer, customOptions) {
+            const cleanCorrect = String(correctAnswer || "").trim();
+            if (Array.isArray(customOptions) && customOptions.length >= 4) {
+                const unique = Array.from(new Set(customOptions.map(o => String(o).trim())));
+                if (!unique.includes(cleanCorrect)) unique[0] = cleanCorrect;
+                return unique.slice(0, 4).sort(() => Math.random() - 0.5);
             }
-
-            return { svg: artSvg, caption: badgeText };
+            const pool = GENERIC_DISTRACTORS.filter(d => d !== cleanCorrect);
+            const picked = pool.sort(() => Math.random() - 0.5).slice(0, 3);
+            return [cleanCorrect, ...picked].sort(() => Math.random() - 0.5);
         }
 
-        function toggleVisualZoom() {
-            const stage = document.getElementById("questionVisualStage");
-            const btn = document.getElementById("zoomVisualBtn");
-            if (!stage || !btn) return;
-            const isZoomed = stage.classList.toggle("zoomed");
-            btn.innerText = isZoomed ? "🔎 تصغير الصورة" : "🔍 عرض الصورة / التكبير";
-            SFX.click();
+        function getTierByIndex(i) {
+            if (i < 17) return { points: 200, level: "سهل" };
+            if (i < 34) return { points: 600, level: "وسط" };
+            return { points: 800, level: "صعب" };
         }
 
-        /* ================= QUESTION BANK BUILDER ================= */
-        function makeQuestions(catTitle, items) {
-            return items.map(([points, q, a, hint]) => ({ points, q, a, hint }));
-        }
+        function getCategoryTailoredQuestion(catName, sectionTitle, qNum, tier) {
+            const n = catName;
+            const s = sectionTitle;
+            const lvl = tier.level;
 
-        function buildFullCategoryQuestions(catName, sectionTitle, customItems) {
-            const pointSchedule = [200, 200, 400, 400, 600, 600];
-            const templates = [
-                {
-                    q: `في فئة «${catName}» (${sectionTitle}): ما هو العنصر أو المصطلح الأساسي الأول الذي يرتبط مباشرة بـ «${catName}»؟`,
-                    a: `المفهوم الجوهري الأول لفئة ${catName}`,
-                    hint: `فكّر في أشهر علامة أو رمز يخطر ببالك فور سماع «${catName}»`
-                },
-                {
-                    q: `تحدّي «${catName}»: ما هي المعلومة الأبرز التي تميّز «${catName}» عن غيرها في ${sectionTitle}؟`,
-                    a: `السمة المميزة لـ ${catName}`,
-                    hint: `ركّز على التفاصيل المعروفة لدى عشّاق ${catName}`
-                },
-                {
-                    q: `سؤال متوسط في «${catName}»: ما هو الاسم أو العنوان الأشهر المرتبط بـ «${catName}»؟`,
-                    a: `الاسم الأشهر في ${catName}`,
-                    hint: `يُعد من أكثر الأسماء تكراراً وشهرة في ${catName}`
-                },
-                {
-                    q: `سؤال رفيع المستوى في «${catName}»: ما هي المحطة أو القاعدة التي بُني عليها «${catName}»؟`,
-                    a: `القاعدة الأساسية لـ ${catName}`,
-                    hint: `اربط الحدث أو العنصر بطبيعة فئة ${catName}`
-                },
-                {
-                    q: `تحدّي الخبراء في «${catName}» (600 نقطة): ما هو التفصيل الدقيق الذي يفرّق بين نسختين أو حالتين داخل «${catName}»؟`,
-                    a: `الفرق الدقيق في ${catName}`,
-                    hint: `يظهر هذا التفصيل غالباً في الأسئلة الدقيقة والملاحظة القوية`
-                },
-                {
-                    q: `السؤال الذهبي في «${catName}» (600 نقطة): ما هو الإنجاز أو المعلومة النادرة المتعلقة بـ «${catName}»؟`,
-                    a: `المعلومة الذهبية الخاصة بـ ${catName}`,
-                    hint: `استعن بذاكرتك السريعة في فئة ${catName} لحسم النقاط`
-                }
-            ];
+            const SPECIFIC_BANKS = {
+                "معلومات عامة": [
+                    { q: "كم يبلغ عدد كواكب المجموعة الشمسية المعروفة؟", a: "8 كواكب", hint: "بدءاً من عطارد وصولاً إلى نبتون", opts: ["8 كواكب", "9 كواكب", "7 كواكب", "10 كواكب"] },
+                    { q: "ما هو أسرع حيوان بري في العالم؟", a: "الفهد (الشيتا)", hint: "يستطيع الوصول إلى سرعات عالية جداً لمسافات قصيرة", opts: ["الفهد (الشيتا)", "الأسد", "الغزال", "النمر"] },
+                    { q: "ما هو أكبر محيط على وجه الأرض من حيث المساحة؟", a: "المحيط الهادئ", hint: "يفصل بين آسيا وأمريكا", opts: ["المحيط الهادئ", "المحيط الأطلسي", "المحيط الهندي", "المحيط المتجمد الجنوبي"] },
+                    { q: "ما هو الغاز الأكثر وفرة في الغلاف الجوي للأرض؟", a: "النيتروجين", hint: "يشكل نحو 78% من الهواء الجاف", opts: ["النيتروجين", "الأكسجين", "ثاني أكسيد الكربون", "الأرجون"] },
+                    { q: "كم عدد أوتار العود العربي التقليدي الأكثر شيوعاً؟", a: "11 وتراً (5 مثناة ووتر قرار)", hint: "من الآلات الوترية الشرقية الشهيرة", opts: ["11 وتراً (5 مثناة ووتر قرار)", "4 أوتار فقط", "20 وتراً", "وتران فقط"] },
+                    { q: "ما هو العضو المسؤول عن ضخ الدم إلى جميع أنحاء جسم الإنسان؟", a: "القلب", hint: "يقع في التجويف الصدري ويميل قليلاً لليسار", opts: ["القلب", "الكبد", "الرئة", "الطحال"] }
+                ],
+                "Marvel": [
+                    { q: "ما هو المعدن النادر الذي صُنعت منه درع كابتن أمريكا ومخالب بلاك بانثر؟", a: "الفايبرانيوم (Vibranium)", hint: "معدن خيالي فائق الصلابة من واكاندا", opts: ["الفايبرانيوم (Vibranium)", "الأدامانتيوم", "الكريبتونيت", "البرونز الأسود"] },
+                    { q: "ما اسم مطرقة ثور الأسطورية التي لا يرفعها إلا من يستحق؟", a: "ميولنير (Mjolnir)", hint: "صُنعت في قلب نجم محتضر في نيدافيلير", opts: ["ميولنير (Mjolnir)", "إكسكاليبر", "الصولجان الكوني", "رمح أودين"] },
+                    { q: "ما اسم الذكاء الاصطناعي الذي أنشأه توني ستارك وساعده في بدلات آيرون مان؟", a: "جارفيس (J.A.R.V.I.S.)", hint: "تحوّل لاحقاً إلى شخصية فيجن", opts: ["جارفيس (J.A.R.V.I.S.)", "سكاي نت", "هال 9000", "ألترا"] },
+                    { q: "من هو الشرير البنفسجي الذي سعى لجمع أحجار اللانهاية لمحو نصف الحياة في الكون؟", a: "ثانوس (Thanos)", hint: "قائد الجحافل من تيتان", opts: ["ثانوس (Thanos)", "لوكي", "ألتراون", "ريد سكال"] },
+                    { q: "ما اسم المملكة الأفريقية المتقدمة تكنولوجياً التي يحكمها بلاك بانثر؟", a: "واكاندا (Wakanda)", hint: "موطن الفايبرانيوم وشعبها الفخور", opts: ["واكاندا (Wakanda)", "أتلانتس", "سوكوفيا", "أسغارد"] },
+                    { q: "ما الاسم الحقيقي لبطل الرجل العنكبوت (Spider-Man) في عالم مارفل؟", a: "بيتر باركر (Peter Parker)", hint: "مصور شاب من كوينز في نيويورك", opts: ["بيتر باركر (Peter Parker)", "بروس بانر", "ستيف روجرز", "سكوت لانغ"] },
+                    { q: "من هو العالم الذي يتحول إلى العملاق الأخضر «هالك» عند الغضب؟", a: "بروس بانر (Bruce Banner)", hint: "تعرّض لإشعاع غاما", opts: ["بروس بانر (Bruce Banner)", "هانك بيم", "توني ستارك", "ستيفن سترينج"] },
+                    { q: "ما اسم فريق الأبطال الذي يضم ستار لورد، غامورا، دراكس، روكيت، وغروت؟", a: "حراس المجرة (Guardians of the Galaxy)", hint: "أبطال الفضاء والمجرات", opts: ["حراس المجرة (Guardians of the Galaxy)", "المنتقمون", "إكس من", "الفانتاستيك فور"] }
+                ],
+                "DC": [
+                    { q: "ما اسم المدينة التي يحميها باتمان في عالم DC؟", a: "غوثام سيتي (Gotham City)", hint: "مدينة مظلمة وقوطية الطابع", opts: ["غوثام سيتي (Gotham City)", "متروبوليس", "سنترال سيتي", "ستار سيتي"] },
+                    { q: "ما اسم المدينة التي يُعرف سوبرمان بحمايتها؟", a: "متروبوليس (Metropolis)", hint: "يعمل فيها كلارك كينت صحفياً في ديلي بلانيت", opts: ["متروبوليس (Metropolis)", "غوثام سيتي", "كوست سيتي", "ثيميسيرا"] },
+                    { q: "ما هو المعدن الفضائي الأخضر الذي يُضعف قوة سوبرمان؟", a: "الكريبتونيت (Kryptonite)", hint: "قادم من كوكب كريبتون المدمّر", opts: ["الكريبتونيت (Kryptonite)", "الفايبرانيوم", "البلاتين", "الأوبسيديان"] },
+                    { q: "ما اسم الجزيرة التي تعيش فيها وندر وومان (Wonder Woman) والأمازونيات؟", a: "ثيميسيرا (Themyscira)", hint: "جزيرة معزولة محاطة بالأساطير", opts: ["ثيميسيرا (Themyscira)", "واكاندا", "أسغارد", "أتلانتس"] }
+                ],
+                "The Boys": [
+                    { q: "ما اسم الشركة العملاقة التي تدير «السبعة» (The Seven) وتتحكم في سوق الأبطال الخارقين في The Boys؟", a: "فوت إنترناشونال (Vought International)", hint: "شركة نافذة ذات طابع إعلامي وتجاري ضخم", opts: ["فوت إنترناشونال (Vought International)", "شيلد (S.H.I.E.L.D.)", "واين إنتربرايزز", "أبستيرغو"] },
+                    { q: "من هو قائد «السبعة» في مسلسل The Boys والمعروف بقوته الهائلة ونظراته الليزرية؟", a: "هوملاندر (Homelander)", hint: "يظهر أمام الجمهور بصورة البطل المثالي", opts: ["هوملاندر (Homelander)", "بيلي بوتشر", "هيوي كامبل", "فرينشي"] },
+                    { q: "من هو زعيم فرقة «ذا بويز» الذي يقود المواجهة ضد هوملاندر وشركة فوت؟", a: "بيلي بوتشر (Billy Butcher)", hint: "شخصية حادة الطباع لا تتردد في المواجهة", opts: ["بيلي بوتشر (Billy Butcher)", "ستارلايت (Starlight)", "ذا ديب (The Deep)", "بلاك نوار"] },
+                    { q: "ما اسم المادة الكيميائية التي تمنح البشر قوى خارقة في عالم The Boys؟", a: "المركب V (Compound V)", hint: "تُحقن غالباً منذ الصغر لإنتاج أبطال «فوت»", opts: ["المركب V (Compound V)", "مصل الجندي الخارق", "الإكسير الأخضر", "العنصر 115"] },
+                    { q: "ما اسم البطلة المنضمة حديثاً إلى «السبعة» والتي تتحكم بالضوء وتكتشف حقيقة الشركة؟", a: "ستارلايت / آني جانواري (Starlight)", hint: "تُعرف بقدراتها الضوئية في الساحة", opts: ["ستارلايت / آني جانواري (Starlight)", "مايف", "كيميكو", "آشلي"] }
+                ],
+                "Harry Potter": [
+                    { q: "ما اسم المدرسة السحرية الشهيرة التي يدرس فيها هاري بوتر وأصدقاؤه؟", a: "هوجورتس (Hogwarts)", hint: "تقع في اسكتلندا وتضم أربعة منازل", opts: ["هوجورتس (Hogwarts)", "بوباتونز", "دورمسترانغ", "إلفرمورني"] },
+                    { q: "ما اسم المنزل الذي ينتمي إليه هاري بوتر ورون وهيرميون في هوجورتس؟", a: "غريفندور (Gryffindor)", hint: "شعاره الأسد وألوانه الأحمر والذهبي", opts: ["غريفندور (Gryffindor)", "سليذرين", "رافينكلو", "هافلباف"] },
+                    { q: "من هو الساحر المظلم الرئيسي الذي واجهه هاري بوتر؟", a: "اللورد فولدمورت (Lord Voldemort)", hint: "يُعرف أيضاً باسم «الذي لا يُسمّى»", opts: ["اللورد فولدمورت (Lord Voldemort)", "ألبوس دمبلدور", "سيفيروس سناب", "روبيوس هاغريد"] },
+                    { q: "ما اسم الأداة السحرية التي تصنف الطلاب الجدد إلى منازل هوجورتس؟", a: "قبعة التنسيق (Sorting Hat)", hint: "تتحدث وتقرأ ميول الطالب قبل اختيار منزله", opts: ["قبعة التنسيق (Sorting Hat)", "مرآة إيرسيد", "خريطة المارودر", "عصا الإلدر"] }
+                ],
+                "Breaking Bad": [
+                    { q: "ما اسم مدرس الكيمياء الذي يتحول إلى «هايزنبرغ» في مسلسل Breaking Bad؟", a: "والتر وايت (Walter White)", hint: "بدأ رحلته بعد تشخيصه بالسرطان", opts: ["والتر وايت (Walter White)", "جيسي بينكمان", "هانك شريدر", "سول غودمان"] },
+                    { q: "ما اسم شريك والتر وايت السابق ورفيقه في التجارة في Breaking Bad؟", a: "جيسي بينكمان (Jesse Pinkman)", hint: "غالباً ما يقول عبارة Yo, bitch!", opts: ["جيسي بينكمان (Jesse Pinkman)", "غوس فرينغ", "مايك إرمانتراوت", "سكايلر وايت"] },
+                    { q: "ما اسم مطعم الدجاج المقلي الشهير الذي يملكه غوس فرينغ كواجهة؟", a: "لوس بويوس هيرمانوس (Los Pollos Hermanos)", hint: "معناه الأخوة الدجاج", opts: ["لوس بويوس هيرمانوس (Los Pollos Hermanos)", "كلاكن بيل", "بولوس روخوس", "تاكو بيل"] }
+                ],
+                "Game Of Thrones": [
+                    { q: "ما اسم القارة الكبرى التي تدور فيها معظم صراعات العروش في Game of Thrones؟", a: "ويستروس (Westeros)", hint: "تضم الممالك السبع والشمال", opts: ["ويستروس (Westeros)", "إيسوس", "سوثوريوس", "أولتوس"] },
+                    { q: "ما اسم عائلة «جون سنو» في الشمال قبل كشف حقيقته؟", a: "آل ستارك (House Stark)", hint: "شعارهم الذئب الرهيب وعبارتهم Winter is Coming", opts: ["آل ستارك (House Stark)", "آل لانيستر", "آل تارجاريان", "آل باراثيون"] },
+                    { q: "بماذا تشتهر عائلة «آل تارجاريان» (House Targaryen)؟", a: "التنانين والشعر الفضي الفاتح", hint: "مثل دينيريس تارجاريان", opts: ["التنانين والشعر الفضي الفاتح", "امتلاك أغنى مناجم الذهب فقط", "الإبحار في الصحراء فقط", "بناء الجدار الجليدي"] }
+                ],
+                "Stranger Things": [
+                    { q: "ما اسم البلدة الصغيرة التي تقع فيها أحداث Stranger Things؟", a: "هوكينز (Hawkins)", hint: "تقع في ولاية إنديانا وتضم مختبراً سرياً", opts: ["هوكينز (Hawkins)", "ديري", "ستارز هولو", "ريفر ديل"] },
+                    { q: "ما اسم البُعد الموازي المظلم والمخيف في Stranger Things؟", a: "العالم المقلوب (The Upside Down)", hint: "نسخة مظلمة ومليئة بالأبواغ والوحوش", opts: ["العالم المقلوب (The Upside Down)", "عالم الأحلام", "المدينة المفقودة", "الغابة الزرقاء"] },
+                    { q: "ما اسم الفتاة ذات القدرات الذهنية التي تحمل الرقم 011؟", a: "إليفن / إيل (Eleven)", hint: "تُعرف بقدراتها التحريكية الذهنية", opts: ["إليفن / إيل (Eleven)", "ماكس مايفيلد", "نانسي ويلر", "روبن باكلي"] }
+                ],
+                "عواصم": [
+                    { q: "ما هي عاصمة اليابان؟", a: "طوكيو", hint: "تقع في جزيرة هونشو", opts: ["طوكيو", "كيوتو", "أوساكا", "سابورو"] },
+                    { q: "ما هي عاصمة أستراليا؟", a: "كانبرا", hint: "ليست سيدني وليست ملبورن", opts: ["كانبرا", "سيدني", "ملبورن", "بريسبان"] },
+                    { q: "ما هي عاصمة كندا؟", a: "أوتاوا", hint: "تقع في مقاطعة أونتاريو", opts: ["أوتاوا", "تورونتو", "فانكوفر", "مونتريال"] },
+                    { q: "ما هي عاصمة البرازيل؟", a: "برازيليا", hint: "بُنيت لتكون عاصمة إدارية مخططة", opts: ["برازيليا", "ريو دي جانيرو", "ساو باولو", "سلفادور"] }
+                ],
+                "ألغاز": [
+                    { q: "ما الشيء الذي كلما زاد نقص؟", a: "العمر", hint: "يمر مع كل عام جديد", opts: ["العمر", "الماء", "الظل", "الصوت"] },
+                    { q: "ما الشيء الذي يمشي بلا أرجل ويبكي بلا عيون؟", a: "السحاب", hint: "يظهر في السماء ويهطل منه المطر", opts: ["السحاب", "النهر", "الرياح", "القمر"] },
+                    { q: "له أوراق وليس بنبات، وله جلد وليس بحيوان، فما هو؟", a: "الكتاب", hint: "نقرأ فيه المعرفة والقصص", opts: ["الكتاب", "الدفتر الصغير", "البطاقة", "الشجرة"] }
+                ],
+                "كرة قدم": [
+                    { q: "كم عدد لاعبي كل فريق داخل أرضية الملعب في مباراة كرة القدم الرسمية؟", a: "11 لاعباً", hint: "بما في ذلك حارس المرمى", opts: ["11 لاعباً", "10 لاعبين", "9 لاعبين", "12 لاعباً"] },
+                    { q: "ما هو المنتخب الأكثر تتويجاً بكأس العالم عبر التاريخ؟", a: "منتخب البرازيل", hint: "يمتلك 5 ألقاب عالمية", opts: ["منتخب البرازيل", "منتخب ألمانيا", "منتخب الأرجنتين", "منتخب إيطاليا"] },
+                    { q: "ما هو النادي الأكثر تتويجاً بلقب دوري أبطال أوروبا؟", a: "ريال مدريد", hint: "نادي إسباني عريق", opts: ["ريال مدريد", "إيه سي ميلان", "بايرن ميونخ", "ليفربول"] }
+                ]
+            };
 
-            return pointSchedule.map((pts, idx) => {
-                const custom = customItems && customItems[idx];
-                if (custom) {
-                    return {
-                        points: custom[0] ?? pts,
-                        q: custom[1],
-                        a: custom[2],
-                        hint: custom[3]
-                    };
-                }
+            const specificPool = SPECIFIC_BANKS[n];
+            if (Array.isArray(specificPool) && specificPool.length > 0) {
+                const pick = specificPool[(qNum - 1) % specificPool.length];
                 return {
-                    points: pts,
-                    q: templates[idx].q,
-                    a: templates[idx].a,
-                    hint: templates[idx].hint
+                    q: `[${lvl} — ${n}] سؤال (${qNum}): ${pick.q}`,
+                    a: pick.a,
+                    hint: pick.hint,
+                    opts: pick.opts
                 };
-            });
+            }
+
+            const sectionTemplates = {
+                "سيرفرات وكلانات": [
+                    {
+                        q: `من هو العنصر الأهم لنجاح أي فرقة أو كلان في «${n}» خلال اللحظات الحاسمة؟`,
+                        a: `التنسيق السريع والالتزام بالخطة في ${n} (#${qNum})`,
+                        hint: `فكّر في أساسيات اللعب الجماعي داخل «${n}»`,
+                        opts: [`التنسيق السريع والالتزام بالخطة في ${n} (#${qNum})`, `الاندفاع الفردي العشوائي بلا تواصل`, `مخالفة القوانين أثناء المواجهة`, `تأخير التحرك دون سبب`]
+                    },
+                    {
+                        q: `أي قرار يُعد الأفضل عندما يواجه فريقك ضغطاً مفاجئاً داخل «${n}»؟`,
+                        a: `إعادة التمركز بهدوء وقراءة تحركات الخصم في ${n} (#${qNum})`,
+                        hint: `التسرع دون تقدير الموقف غالباً ما يضر الفريق`,
+                        opts: [`إعادة التمركز بهدوء وقراءة تحركات الخصم في ${n} (#${qNum})`, `القتال في موقع مكشوف بلا غطاء`, `تشتيت الفريق بأوامر متضاربة`, `ترك الموقع قبل تأمينه`]
+                    }
+                ],
+                "الإمارات": [
+                    {
+                        q: `أي قيمة أو مظهر يرتبط ارتباطاً وثيقاً بمحور «${n}» في الثقافة الإماراتية؟`,
+                        a: `الروح الاتحادية وكرم الضيافة والأصالة في ${n} (#${qNum})`,
+                        hint: `اربط الإجابة بثقافة الإمارات وتقاليدها في «${n}»`,
+                        opts: [`الروح الاتحادية وكرم الضيافة والأصالة في ${n} (#${qNum})`, `معلومة تخص دولة أوروبية بعيدة`, `مصطلح غير مرتبط بالتراث الإماراتي`, `حدث لا علاقة له بالإمارات`]
+                    },
+                    {
+                        q: `ما الذي يجمع بين التراث والابتكار في تجارب «${n}» بدولة الإمارات؟`,
+                        a: `الحفاظ على الهوية الأصيلة مع مواكبة التطور الحديث في ${n} (#${qNum})`,
+                        hint: `تتميز الإمارات بالجمع بين الأصالة والحداثة`,
+                        opts: [`الحفاظ على الهوية الأصيلة مع مواكبة التطور الحديث في ${n} (#${qNum})`, `إهمال التراث المحلي تماماً`, `الاعتماد على التخمين العشوائي`, `معلومة تاريخية مغلوطة`]
+                    }
+                ],
+                "كائنات الزواحف": [
+                    {
+                        q: `كيف تتكيف الزواحف في فئة «${n}» مع ظروف بيئتها اليومية؟`,
+                        a: `عبر التمويه وتنظيم حرارة الجسم وحماية الذات (#${qNum})`,
+                        hint: `الزواحف تعتمد على تكيفات فسيولوجية وسلوكية دقيقة`,
+                        opts: [`عبر التمويه وتنظيم حرارة الجسم وحماية الذات (#${qNum})`, `عبر الريش العازل والطيران لمسافات بعيدة`, `عبر الخياشيم والتنفس تحت الماء طوال العمر`, `عبر الفراء السميك في القطب المتجمد`]
+                    }
+                ],
+                "فن أجنبي": [
+                    {
+                        q: `ما الذي يميز الأعمال أو الشخصيات الأبرز في «${n}»؟`,
+                        a: `قوة الحبكة وتطور الشخصيات وتأثير المشاهد في ${n} (#${qNum})`,
+                        hint: `فكّر في عناصر السرد والشخصيات في «${n}»`,
+                        opts: [`قوة الحبكة وتطور الشخصيات وتأثير المشاهد في ${n} (#${qNum})`, `نشرة أخبار اقتصادية يومية`, `كتيب صيانة الأجهزة المنزلية`, `قائمة أسعار المواد الغذائية`]
+                    }
+                ],
+                "تفكير وألغاز": [
+                    {
+                        q: `في تحدي «${n}» الذهني، ما هي الخطوة الأذكى قبل اختيار الإجابة؟`,
+                        a: `تحليل المعطيات والربط المنطقي بين أجزاء الفكرة (#${qNum})`,
+                        hint: `اقرأ الفكرة بهدوء ولا تتعجل قبل فحص المعطيات`,
+                        opts: [`تحليل المعطيات والربط المنطقي بين أجزاء الفكرة (#${qNum})`, `تجاهل المعطيات والاعتماد على الحظ فقط`, `اختيار أول كلمة دون تفكير`, `افتراض أرقام غير موجودة في السؤال`]
+                    }
+                ],
+                "دول العالم": [
+                    {
+                        q: `أي وصف يعبّر بدقة عن فئة «${n}» عند استكشاف دول العالم؟`,
+                        a: `ربط الدولة بمعلمها أو رمزها أو موقعها الجغرافي الصحيح (#${qNum})`,
+                        hint: `تحقق من ارتباط الخيار بطبيعة السؤال في «${n}»`,
+                        opts: [`ربط الدولة بمعلمها أو رمزها أو موقعها الجغرافي الصحيح (#${qNum})`, `خلط بين قارتين مختلفتين بلا أساس`, `نسب عملة دولة إلى قارة أخرى`, `معلومة خيالية غير موجودة على الخريطة`]
+                    }
+                ],
+                "كرة قدم": [
+                    {
+                        q: `في «${n}» بعالم كرة القدم، ما العنصر الذي يصنع الفارق داخل المستطيل الأخضر أو البطولات؟`,
+                        a: `الانضباط التكتيكي وقراءة اللعب واستغلال الفرص (#${qNum})`,
+                        hint: `تذكّر قواعد اللعبة والبطولات واللاعبين في «${n}»`,
+                        opts: [`الانضباط التكتيكي وقراءة اللعب واستغلال الفرص (#${qNum})`, `قاعدة غير موجودة في قوانين كرة القدم`, `إحصائية لا تمت للعبة بصلة`, `بطولة من رياضة مختلفة`]
+                    }
+                ],
+                "رياضة": [
+                    {
+                        q: `في «${n}»، ما الذي يعزز الأداء والمنافسة الشريفة بين اللاعبين؟`,
+                        a: `الجاهزية البدنية والالتزام بقوانين اللعبة (#${qNum})`,
+                        hint: `فكّر في أساسيات المنافسة في «${n}»`,
+                        opts: [`الجاهزية البدنية والالتزام بقوانين اللعبة (#${qNum})`, `تجاهل قواعد التحكيم والسلامة`, `غياب التدريب والتحضير`, `معلومة خارج المجال الرياضي`]
+                    }
+                ],
+                "ألعاب": [
+                    {
+                        q: `في «${n}»، ما المهارة التي ترفع مستوى اللاعب وتمنحه أفضلية في المواجهات؟`,
+                        a: `إدارة الموارد والتمركز الصحيح وفهم آليات اللعب (#${qNum})`,
+                        hint: `فكّر في مهارات اللعب والتكتيك داخل «${n}»`,
+                        opts: [`إدارة الموارد والتمركز الصحيح وفهم آليات اللعب (#${qNum})`, `تجاهل خريطة اللعب أو أهداف المرحلة`, `الضغط العشوائي دون هدف`, `معلومة غير مرتبطة بالألعاب`]
+                    }
+                ],
+                "إسلامي": [
+                    {
+                        q: `ما الذي يبرز أهمية «${n}» في الثقافة والمعرفة الإسلامية؟`,
+                        a: `ترسيخ المعاني والقيم والهداية المستمدة من المصادر الموثوقة (#${qNum})`,
+                        hint: `تأمل في دلالة السؤال ومضمونه الشرعي أو التاريخي`,
+                        opts: [`ترسيخ المعاني والقيم والهداية المستمدة من المصادر الموثوقة (#${qNum})`, `تفسير خاطئ أو غير دقيق`, `معلومة منقوصة ومضللة`, `أمر لا يتعلق بموضوع السؤال`]
+                    }
+                ],
+                "عام": [
+                    {
+                        q: `ما الذي يميز موضوع «${n}» عن غيره من المعارف اليومية؟`,
+                        a: `تنوع المعارف والوقائع المرتبطة بـ «${n}» بدقة ووضوح (#${qNum})`,
+                        hint: `ركّز على المعنى المباشر المرتبط بـ «${n}»`,
+                        opts: [`تنوع المعارف والوقائع المرتبطة بـ «${n}» بدقة ووضوح (#${qNum})`, `معلومة غير دقيقة أو مضللة`, `تفصيل يخص مجالاً مختلفاً`, `خيار مستبعد عن السياق`]
+                    }
+                ]
+            };
+
+            const pool = sectionTemplates[s] || sectionTemplates["عام"];
+            const chosen = pool[(qNum - 1) % pool.length];
+            return {
+                q: `[${lvl} — ${n}] سؤال (${qNum}): ${chosen.q}`,
+                a: chosen.a,
+                hint: chosen.hint,
+                opts: chosen.opts
+            };
         }
 
-        /* ================= SECTIONS & CATEGORIES ================= */
+        function createNamedCategory(prefix, idx, name, sectionTitle, icon, flag, description, seedQuestions) {
+            const safeSeeds = Array.isArray(seedQuestions) ? seedQuestions : [];
+            const questions = [];
+
+            for (let i = 0; i < 50; i++) {
+                const tier = getTierByIndex(i);
+                const seeded = safeSeeds[i];
+
+                if (seeded && Array.isArray(seeded)) {
+                    const seededPoints = typeof seeded[0] === "number" ? seeded[0] : tier.points;
+                    const seededLevel = seededPoints === 200 ? "سهل" : seededPoints === 600 ? "وسط" : "صعب";
+                    const qText = String(seeded[1] || "");
+                    const ansText = String(seeded[2] || "");
+                    const hintText = String(seeded[3] || `تلميح في فئة ${name}`);
+                    const rawOpts = Array.isArray(seeded[4]) ? seeded[4] : [];
+                    questions.push({
+                        points: seededPoints,
+                        level: seededLevel,
+                        q: qText,
+                        a: ansText,
+                        hint: hintText,
+                        options: buildOptionsList(ansText, rawOpts)
+                    });
+                } else {
+                    const built = getCategoryTailoredQuestion(name, sectionTitle, i + 1, tier);
+                    questions.push({
+                        points: tier.points,
+                        level: tier.level,
+                        q: built.q,
+                        a: built.a,
+                        hint: built.hint,
+                        options: buildOptionsList(built.a, built.opts)
+                    });
+                }
+            }
+
+            return {
+                id: `${prefix}_${idx}_${name.replace(/\s+/g, "_")}`,
+                name,
+                section: sectionTitle,
+                icon: icon || ICONS.general,
+                flag: flag || "",
+                description: description || `فئة ${name} ضمن قسم ${sectionTitle} وتضم 50 سؤالاً بمستويات 200 سهل، 600 وسط، و800 صعب.`,
+                questions
+            };
+        }
+
+        /* ================= TEXT-BASED SECTIONS & CATEGORIES ONLY ================= */
         const SECTIONS_DATA = [
+            {
+                id: "sec_servers_clans",
+                title: "السيرفرات والكلانات",
+                categories: [
+                    createNamedCategory("srv", 0, "ريسبكت", "السيرفرات والكلانات", ICONS.respect, "", "أسئلة عن أشهر الشخصيات والعصابات والقيادات والسيناريوهات في سيرفر ريسبكت (Respect RP).", [
+                        [200, "من هي الشخصية الشهيرة التي تقود عصابة «المافيا / العائلة» وتُعرف بهدوئها وتخطيطها الاستراتيجي في ريسبكت؟", "أبو طلال (الزعيم)", "من أبرز الشخصيات القيادية في سيناريوهات ريسبكت", ["أبو طلال (الزعيم)", "ميكانيكي الورشة", "سائق الإسعاف", "مراسل الأخبار"]],
+                        [200, "من هي الشخصية المعروفة بروح الفكاهة والمواقف الكوميدية في شوارع ومطاعم ريسبكت؟", "عبود (شخصية الكوميديا)", "يشتهر بمقالبه ومواقفه الطريفة مع الشرطة", ["عبود (شخصية الكوميديا)", "قائد القوات الخاصة", "مدير البنك المركزي", "قاضي المحكمة"]],
+                        [600, "من هي الشخصية القيادية التي تتولى إدارة العمليات الأمنية والمطاردات الكبرى في شرطة ريسبكت؟", "قائد الشرطة (الجنرال)", "يقود غرفة العمليات والمداهمات في المدينة", ["قائد الشرطة (الجنرال)", "بائع السيارات المستعملة", "حارس الميناء", "مدرب النادي"]],
+                        [600, "ما الاسم الذي يُطلق على الشخصية التي تدير أشهر ورشة تعديل وتزويد سيارات السباق في ريسبكت؟", "المعلّم (كبير الميكانيكيين)", "المسؤول الأول عن التيربو وتعديل المحركات", ["المعلّم (كبير الميكانيكيين)", "طبيب الطوارئ", "مذيع الراديو", "طيار الهليكوبتر"]],
+                        [800, "من هي الشخصية الغامضة في ريسبكت التي تتحكم في صفقات السوق السوداء والأسلحة النادرة؟", "الشبح (تاجر السوق السوداء)", "لا يظهر إلا في مواقع سرية وبشروط خاصة", ["الشبح (تاجر السوق السوداء)", "موظف البلدية", "سائق الحافلة", "حارس الحديقة"]],
+                        [800, "من هي الشخصية التي تتولى الدفاع عن المتهمين وإسقاط التهم في محاكم ريسبكت؟", "المحامي (المستشار القانوني)", "يترافع أمام القاضي لإخراج أعضاء العصابات", ["المحامي (المستشار القانوني)", "موزع البريد", "صياد الأسماك", "عامل المنجم"]]
+                    ]),
+                    createNamedCategory("srv", 1, "مستري تاون", "السيرفرات والكلانات", ICONS.mystery, "", "أسئلة حول أبرز الشخصيات الغامضة والمحققين والزعماء في عالم مستري تاون (Mystery Town).", [
+                        [200, "من هي الشخصية المحورية التي تقود التحقيقات وتفك شفرات الجرائم في مستري تاون؟", "المحقق كونان / كبير المحققين", "يجمع الأدلة ويستجوب المشتبه بهم في مسرح الجريمة", ["المحقق كونان / كبير المحققين", "بائع الزهور", "سائق القطار", "حارس المتحف"]],
+                        [200, "من هي الشخصية التي تدير المقهى السري الذي يجتمع فيه أبطال وعملاء مستري تاون؟", "صاحب المقهى الغامض (الباريستا)", "يملك معلومات عن كل من يدخل المدينة", ["صاحب المقهى الغامض (الباريستا)", "مدرب السباحة", "ساعي البريد", "فني التكييف"]],
+                        [600, "من هي الشخصية المقنّعة التي تترك ألغازاً ورسائل مشفرة قبل تنفيذ عملياتها في مستري تاون؟", "اللص الشبح (سيد الألغاز)", "يتحدى المحققين بترك بصمة أو لغز في كل موقع", ["اللص الشبح (سيد الألغاز)", "رئيس البلدية", "طبيب الأسنان", "مصور الصحيفة"]],
+                        [600, "من هي الشخصية التقنية التي تخترق الكاميرات وتفك تشفير الخزائن في مستري تاون؟", "الهاكر (صفر / Zero)", "العقل الإلكتروني لأي عملية اقتحام", ["الهاكر (صفر / Zero)", "نجار الخشب", "سائق الشاحنة", "بائع التذاكر"]],
+                        [800, "من هي الشخصية التي تترأس المجلس السري وتعرف تاريخ تأسيس مستري تاون بالكامل؟", "العراب / حكيم المدينة", "يحتفظ بأرشيف الأسرار القديمة للمدينة", ["العراب / حكيم المدينة", "متدرب الشرطة الجديد", "عامل النظافة", "بائع الآيس كريم"]],
+                        [800, "من هي الشخصية المزدوجة التي تعمل في النهار كمسؤول رسمي وفي الليل تقود تنظيماً سرياً في مستري تاون؟", "العميل المزدوج (الظل)", "أخطر شخصية يصعب كشف هويتها الحقيقية", ["العميل المزدوج (الظل)", "حارس البوابة", "مذيع الطقس", "مدرب الخيول"]]
+                    ]),
+                    createNamedCategory("srv", 2, "فالكون", "السيرفرات والكلانات", ICONS.falcons, "", "أسئلة عن كلان ومنظمة فالكون (Team Falcons) وإنجازاتها وصناع المحتوى.", [
+                        [200, "ما هو رمز وشعار منظمة فالكون (Team Falcons)؟", "الصقر الأخضر", "مستوحى من الصقور العربية", ["الصقر الأخضر", "الذئب الأزرق", "النمر الذهبي", "النسر الأحمر"]],
+                        [200, "ما هو المقر الرئيسي لمنظمة Team Falcons؟", "المملكة العربية السعودية", "أكبر منظمة رياضات إلكترونية في المنطقة", ["المملكة العربية السعودية", "اليابان", "البرازيل", "كندا"]],
+                        [600, "في أي مجال حققت منظمة فالكون شهرة عالمية واسعة وجوائز كبرى؟", "الرياضات الإلكترونية (Esports) وصناعة المحتوى", "تشارك في أكبر البطولات العالمية", ["الرياضات الإلكترونية (Esports) وصناعة المحتوى", "سباقات الخيل فقط", "صناعة السيارات", "الطيران المدني"]],
+                        [600, "ما اسم البطولة العالمية الضخمة في الرياض التي تألق فيها فريق فالكون وتوّج بلقبها؟", "كأس العالم للرياضات الإلكترونية (Esports World Cup)", "تُقام سنوياً في الرياض", ["كأس العالم للرياضات الإلكترونية (Esports World Cup)", "كأس أمم أوروبا", "بطولة ويمبلدون", "رالي داكار"]],
+                        [800, "من هو المؤسس والرئيس التنفيذي لمنظمة Team Falcons؟", "مساعد الدوسري (Msdossary)", "بطل العالم السابق في فيفا", ["مساعد الدوسري (Msdossary)", "توني ستارك", "بيب غوارديولا", "مايكل جوردن"]],
+                        [800, "ما اسم سلسلة التحديات والفعاليات الترفيهية الشهيرة التي يقدمها صناع محتوى فالكون؟", "تحديات فالكون / معسكرات فالكون", "تجمع أشهر صناع المحتوى العرب", ["تحديات فالكون / معسكرات فالكون", "نشرة الأخبار الجوية", "دروس الطبخ الإيطالي", "سباقات الدراجات الجبلية"]]
+                    ]),
+                    createNamedCategory("srv", 3, "باور", "السيرفرات والكلانات", ICONS.power, "", "أسئلة عن كلان باور (Power eSports) وأعضائه وتحدياته الشهيرة.", [
+                        [200, "ما هو اللون الأساسي المرتبط بشعار كلان باور (Power)؟", "البرتقالي والأسود", "يتميز بعلامة البرق / الطاقة", ["البرتقالي والأسود", "الوردي والأبيض", "الأخضر الفاتح فقط", "البنفسجي والفضي"]],
+                        [200, "بماذا يشتهر كلان باور في العالم العربي؟", "صناعة المحتوى الترفيهي والألعاب والتحديات الجماعية", "يضم نخبة من اليوتيوبرز والستريمرز", ["صناعة المحتوى الترفيهي والألعاب والتحديات الجماعية", "برامج الوثائقيات العلمية", "نقل مباريات التنس", "تصميم الأزياء"]],
+                        [600, "ما هو الرمز الذي يظهر في شعار كلان باور؟", "رمز الطاقة / البرق (Power Symbol)", "يعبر عن القوة والحماس", ["رمز الطاقة / البرق (Power Symbol)", "مرساة سفينة", "ريشة رسم", "مفتاح موسيقي"]],
+                        [600, "من هو مؤسس كلان باور (Power)؟", "إبراهيم (شؤنق / Shoong)", "من أوائل صناع المحتوى في المجتمع", ["إبراهيم (شؤنق / Shoong)", "كريستيانو رونالدو", "إيلون ماسك", "هيديو كوجيما"]],
+                        [800, "ما اسم السلسلة الترفيهية الشهيرة التي يقدمها أعضاء كلان باور في أجواء حماسية ومقالب وتحديات؟", "تحديات باور / فيلا باور (Power House)", "تجمع أعضاء الكلان في تحديات أسبوعية", ["تحديات باور / فيلا باور (Power House)", "مطبخ باور", "رحلات الفضاء", "سباقات القوارب"]],
+                        [800, "في أي مجال بدأ كلان باور انطلاقته الأولى قبل التوسع في اليوتيوب والبطولات؟", "ألعاب الفيديو التنافسية (مثل كول أوف ديوتي وفورتنايت)", "انطلق من مجتمع القيمرز", ["ألعاب الفيديو التنافسية (مثل كول أوف ديوتي وفورتنايت)", "الشطرنج الكلاسيكي", "ألعاب الورق", "كرة الطاولة"]]
+                    ])
+                ]
+            },
             {
                 id: "sec_uae_special",
                 title: "الإمارات",
                 categories: [
-                    {
-                        id: "uae_2dec",
-                        name: "2 ديسمبر",
-                        flag: "🇦🇪",
-                        icon: ICONS.dec2,
-                        description: "اليوم الوطني، قيام الاتحاد، وأبرز المحطات والرموز الإماراتية.",
-                        questions: makeQuestions("2 ديسمبر", [
-                            [200, "في أي تاريخ يُحتفل باليوم الوطني لدولة الإمارات العربية المتحدة؟", "2 ديسمبر", "في بداية شهر ديسمبر من كل عام"],
-                            [200, "كم عدد الحكام الذين وقعوا وثيقة اتحاد دولة الإمارات عام 1971؟", "6 حكام", "حكام الإمارات الست المؤسسة للاتحاد آنذاك"],
-                            [400, "في أي مدينة إماراتية أُعلن قيام اتحاد دولة الإمارات رسمياً عام 1971؟", "دبي (في قصر الضيافة بالجميرا)", "الوثيقة الدستورية تم توقيعها في دبي"],
-                            [400, "كم عدد ألوان علم دولة الإمارات العربية المتحدة؟", "4 ألوان", "الأحمر، الأخضر، الأبيض، والأسود"],
-                            [600, "ما اسم أول رئيس لدولة الإمارات العربية المتحدة؟", "الشيخ زايد بن سلطان آل نهيان رحمه الله", "مؤسس الاتحاد وباني نهضتها"],
-                            [600, "ما هي الإمارة السابعة التي انضمت إلى الاتحاد بعد إعلانه بفترة وجيزة؟", "رأس الخيمة", "انضمت في فبراير عام 1972"]
-                        ])
-                    },
-                    {
-                        id: "uae_logos",
-                        name: "شعارات إماراتية",
-                        flag: "🇦🇪",
-                        icon: ICONS.uaeLogos,
-                        description: "اختبر معرفتك بأشهر الشعارات والمؤسسات والوجهات الإماراتية.",
-                        questions: makeQuestions("شعارات إماراتية", [
-                            [200, "ما اسم أطول برج في العالم ويقع في وسط مدينة دبي؟", "برج خليفة", "يتجاوز ارتفاعه 828 متراً"],
-                            [200, "ما اسم طيران الإمارات الوطني الذي يتخذ من دبي مقراً له؟", "طيران الإمارات (Emirates)", "يشتهر بشعار الخط العربي على ذيل الطائرة"],
-                            [400, "ما اسم المتحف الشهير في دبي الذي يتميز بتصميمه البيضاوي والخط العربي المفرغ؟", "متحف المستقبل", "شعاره: نرى المستقبل في تفاصيل الحاضر"],
-                            [400, "ما اسم شركة الاتصالات الإماراتية المعروفة بلونها الأخضر وشعارها المميز؟", "إي آند (e& / اتصالات سابقاً)", "إحدى أكبر مجموعات الاتصالات في المنطقة"],
-                            [600, "ما اسم الجزيرة الثقافية في أبوظبي التي تضم متحف اللوفر أبوظبي؟", "جزيرة السعديات", "تقع شمال شرق جزيرة أبوظبي"],
-                            [600, "ما اسم شركة الطاقة المتجددة والمستقبلية الرائدة في أبوظبي؟", "مصدر (Masdar)", "تستضيف أسبوع أبوظبي للاستدامة"]
-                        ])
-                    },
-                    {
-                        id: "uae_malls",
-                        name: "مجمعات الإمارات",
-                        flag: "🇦🇪",
-                        icon: ICONS.uaeMalls,
-                        description: "أشهر المولات والمراكز التجارية والوجهات الترفيهية في الإمارات.",
-                        questions: makeQuestions("مجمعات الإمارات", [
-                            [200, "ما اسم أكبر مول في العالم من حيث المساحة الإجمالية ويقع بجوار برج خليفة؟", "دبي مول (Dubai Mall)", "يضم نافورة دبي وأكواريوم دبي"],
-                            [200, "ما اسم المول الشهير في دبي الذي يضم منحدراً للتزلج الداخلي (سكي دبي)؟", "مول الإمارات (Mall of the Emirates)", "يقع على شارع الشيخ زايد"],
-                            [400, "ما اسم المول الضخم في مدينة أبوظبي الذي يضم قبة كبيرة وواجهات عصرية حديثة؟", "غاليريا مول (أو ياس مول / دلما مول)", "ياس مول يقع في جزيرة ياس"],
-                            [400, "ما اسم الوجهة الترفيهية الموسمية الشهيرة في دبي التي تضم أجنحة للدول وعروضاً عالمية؟", "القرية العالمية (Global Village)", "تُفتح في فصل الشتاء من كل عام"],
-                            [600, "ما اسم المول الشهير في منطقة جميرا بدبي الذي يضم قبة زجاجية كبيرة على شكل بيت بدوي؟", "سوق مدينة جميرا", "يطل على فندق برج العرب"],
-                            [600, "ما اسم المول الشهير في مدينة العين بإمارة أبوظبي؟", "العين مول (أو الجيمي مول / بوادي مول)", "يقع في قلب مدينة العين"]
-                        ])
-                    },
-                    {
-                        id: "uae_girls",
-                        name: "بنات الإمارات",
-                        flag: "🇦🇪",
-                        icon: ICONS.uaeGirls,
-                        description: "إنجازات ومبادرات ورموز إماراتية نسائية في مختلف المجالات.",
-                        questions: makeQuestions("بنات الإمارات", [
-                            [200, "ما هو اللقب الرسمي الذي يُطلق على سمو الشيخة فاطمة بنت مبارك؟", "أم الإمارات", "رئيسة الاتحاد النسائي العام"],
-                            [200, "في أي تاريخ يُحتفل بيوم المرأة الإماراتية سنوياً؟", "28 أغسطس", "أطلقته أم الإمارات عام 2015"],
-                            [400, "من هي أول رائدة فضاء إماراتية وعربية تم اختيارها ضمن برنامج الفضاء الإماراتي؟", "نورا المطروشي", "اختيرت عام 2021"],
-                            [400, "ما اسم المبادرة الوطنية الإماراتية التي تهدف لدعم رائدات الأعمال والمواهب النسائية؟", "مؤسسة دبي للمرأة (أو مجلس الإمارات للتوازن بين الجنسين)", "تعزز حضور المرأة في القيادة والاقتصاد"],
-                            [600, "من هي أول إماراتية وصلت إلى قمة جبل إيفرست؟", "نادية المعمري", "حققت الإنجاز التاريخي عام 2011"],
-                            [600, "ما اسم اليوم الوطني لرياضة المرأة الإماراتية؟", "12 نوفمبر", "يحتفي بإنجازات الرياضيات الإماراتيات"]
-                        ])
-                    },
-                    {
-                        id: "uae_jamaiya",
-                        name: "الجمعية",
-                        flag: "🇦🇪",
-                        icon: ICONS.jamaiya,
-                        description: "ثقافة الجمعيات التعاونية والمشتريات المنزلية والأسواق في الإمارات.",
-                        questions: makeQuestions("الجمعية", [
-                            [200, "بماذا يُطلق محلياً في الإمارات على السوبرماركت التعاوني الكبير؟", "الجمعية", "مثل جمعية الاتحاد التعاونية وجمعية أبوظبي التعاونية"],
-                            [200, "ما اسم العملة المستخدمة عند الدفع في جميع الجمعيات في الإمارات؟", "الدرهم الإماراتي", "يرمز له AED أو د.إ"],
-                            [400, "ماذا يُسمى الدفع المسبق أو الدفع عبر البطاقة اللاتلامسية في صناديق المحاسبة؟", "آبل باي / بطاقة الخصم المباشر", "أسرع وسيلة للدفع عند الكاشير"],
-                            [400, "ما اسم المنتج الأساسي الذي لا يكاد يخلو منه بيت إماراتي مع القهوة؟", "التمر", "يُقدم مع القهوة العربية"],
-                            [600, "في أي عام تأسست جمعية الاتحاد التعاونية في دبي كأول جمعية تعاونية استهلاكية؟", "1982 م", "تضم فروعاً متعددة في دبي"],
-                            [600, "ما اسم الأرز الشعبي الأكثر استخداماً في المطبخ الإماراتي والخليجي للكبسة والبرياني؟", "أرز البسمتي (أو العيش)", "يُسمى العيش في اللهجة الإماراتية"]
-                        ])
-                    },
-                    {
-                        id: "uae_restaurants",
-                        name: "مطاعم الإمارات",
-                        flag: "🇦🇪",
-                        icon: ICONS.uaeFood,
-                        description: "أشهر الأطباق والمطاعم والمقاهي الشعبية والعصرية في الإمارات.",
-                        questions: makeQuestions("مطاعم الإمارات", [
-                            [200, "ما هي الأكلة الإماراتية الشعبية الشهيرة المصنوعة من الدقيق والماء والملح وتُقدم مع السمن والعسل أو الدبس؟", "اللقيمات (أو الخبيص / الرقاق)", "تشتهر في رمضان والمناسبات"],
-                            [200, "ما هي الأكلة الشعبية الإماراتية التي تتكون من اللحم أو الدجاج مع القمح المجروش والبهارات؟", "الهريس", "تُطبخ لساعات طويلة وتُقدم بالسمن"],
-                            [400, "ما هي الأكلة الشعبية المعروفة باسم «المضروبة» في المطبخ الإماراتي؟", "أكلة تُضرب بالملعقة حتى تتجانس مع الأرز والسمك أو الدجاج", "تُعرف بقوامها المتجانس اللذيذ"],
-                            [400, "ما هي الحلوى الإماراتية الشعبية المصنوعة من الطحين المحمص والسكر والزعفران والهيل؟", "الخبيص", "حلوى تراثية غنية بالنكهات"],
-                            [600, "ما هي الأكلة الإماراتية التي تُقدم عادة مع صلصة «الصالونة» والليمون الأسود (اللومي)؟", "المجبوس", "أرز متبل بالبهارات الإماراتية واللومي"],
-                            [600, "ما اسم المشروب التقليدي الإماراتي الذي يُعد من التمر أو الفواكه ويُقدم بارداً أو دافئاً في المجالس؟", "القهوة العربية (أو الكرك)", "شاي الكرك مشروب شعبي محبوب جداً"]
-                        ])
-                    },
-                    {
-                        id: "uae_general",
-                        name: "الإمارات",
-                        flag: "🇦🇪",
-                        icon: ICONS.uae,
-                        description: "مدن الإمارات، التراث، الجغرافيا، وأبرز المعالم.",
-                        questions: makeQuestions("الإمارات", [
-                            [200, "ما هي عاصمة دولة الإمارات العربية المتحدة؟", "أبوظبي", "أكبر إمارة من حيث المساحة"],
-                            [200, "كم عدد الإمارات في دولة الإمارات العربية المتحدة؟", "7 إمارات", "أبوظبي، دبي، الشارقة، عجمان، أم القيوين، رأس الخيمة، الفجيرة"],
-                            [400, "ما اسم أقدم مسجد أثري قائم في إمارة الفجيرة؟", "مسجد البدية", "يتميز بقبابه الأربع"],
-                            [400, "ما اسم أول رائد فضاء إماراتي صعد إلى محطة الفضاء الدولية؟", "هزاع المنصوري", "انطلق عام 2019"],
-                            [600, "ما اسم المسبار الإماراتي الذي وصل إلى مدار كوكب المريخ؟", "مسبار الأمل", "أول مهمة عربية لاستكشاف الكواكب"],
-                            [600, "ما اسم المنطقة الجبلية الشهيرة بأجوائها المعتدلة في رأس الخيمة والتي تضم أعلى قمة في الإمارات (جبل الجيس)؟", "جبل الجيس", "يقع في أقصى شمال رأس الخيمة"]
-                        ])
-                    }
+                    createNamedCategory("uae", 0, "اليوم الوطني", "الإمارات", ICONS.dec2, "🇦🇪", "اليوم الوطني، قيام الاتحاد، وأبرز المحطات والرموز الإماراتية.", [
+                        [200, "في أي تاريخ يُحتفل باليوم الوطني لدولة الإمارات العربية المتحدة؟", "2 ديسمبر", "في بداية شهر ديسمبر من كل عام", ["2 ديسمبر", "14 أغسطس", "23 سبتمبر", "18 نوفمبر"]],
+                        [200, "كم عدد الحكام الذين وقعوا وثيقة اتحاد دولة الإمارات عام 1971؟", "6 حكام", "حكام الإمارات الست المؤسسة للاتحاد آنذاك", ["6 حكام", "4 حكام", "9 حكام", "5 حكام"]],
+                        [600, "في أي مدينة إماراتية أُعلن قيام اتحاد دولة الإمارات رسمياً عام 1971؟", "دبي (في قصر الضيافة بالجميرا)", "الوثيقة الدستورية تم توقيعها في دبي", ["دبي (في قصر الضيافة بالجميرا)", "العين", "خورفكان", "ليوا"]],
+                        [600, "كم عدد ألوان علم دولة الإمارات العربية المتحدة؟", "4 ألوان", "الأحمر، الأخضر، الأبيض، والأسود", ["4 ألوان", "3 ألوان", "5 ألوان", "لونان فقط"]],
+                        [800, "ما اسم أول رئيس لدولة الإمارات العربية المتحدة؟", "الشيخ زايد بن سلطان آل نهيان رحمه الله", "مؤسس الاتحاد وباني نهضتها", ["الشيخ زايد بن سلطان آل نهيان رحمه الله", "الشيخ راشد بن سعيد آل مكتوم", "الشيخ خليفة بن زايد", "الشيخ صقر بن محمد القاسمي"]],
+                        [800, "ما هي الإمارة السابعة التي انضمت إلى الاتحاد بعد إعلانه بفترة وجيزة؟", "رأس الخيمة", "انضمت في فبراير عام 1972", ["رأس الخيمة", "الفجيرة", "عجمان", "أم القيوين"]]
+                    ]),
+                    createNamedCategory("uae", 1, "شعارات", "الإمارات", ICONS.uaeLogos, "🇦🇪", "اختبر معرفتك بأشهر الشعارات والمؤسسات والوجهات الإماراتية.", [
+                        [200, "ما اسم أطول برج في العالم ويقع في وسط مدينة دبي؟", "برج خليفة", "يتجاوز ارتفاعه 828 متراً", ["برج خليفة", "برج العرب", "برج رافال", "برج الحمراء"]],
+                        [200, "ما اسم طيران الإمارات الوطني الذي يتخذ من دبي مقراً له؟", "طيران الإمارات (Emirates)", "يشتهر بشعار الخط العربي على ذيل الطائرة", ["طيران الإمارات (Emirates)", "الخطوط القطرية", "طيران الخليج", "الملكية الأردنية"]],
+                        [600, "ما اسم المتحف الشهير في دبي الذي يتميز بتصميمه البيضاوي والخط العربي المفرغ؟", "متحف المستقبل", "شعاره: نرى المستقبل في تفاصيل الحاضر", ["متحف المستقبل", "متحف اللوفر", "متحف الشارقة للحضارة", "متحف الاتحاد"]],
+                        [600, "ما اسم شركة الاتصالات الإماراتية المعروفة بلونها الأخضر وشعارها المميز؟", "إي آند (e& / اتصالات سابقاً)", "إحدى أكبر مجموعات الاتصالات في المنطقة", ["إي آند (e& / اتصالات سابقاً)", "زين", "أوريدو", "موبايلي"]],
+                        [800, "ما اسم الجزيرة الثقافية في أبوظبي التي تضم متحف اللوفر أبوظبي؟", "جزيرة السعديات", "تقع شمال شرق جزيرة أبوظبي", ["جزيرة السعديات", "جزيرة النخلة", "جزيرة صير بني ياس", "جزيرة دلما"]],
+                        [800, "ما اسم شركة الطاقة المتجددة والمستقبلية الرائدة في أبوظبي؟", "مصدر (Masdar)", "تستضيف أسبوع أبوظبي للاستدامة", ["مصدر (Masdar)", "أدنوك", "مبادلة", "ديوا"]]
+                    ]),
+                    createNamedCategory("uae", 2, "مولات", "الإمارات", ICONS.uaeMalls, "🇦🇪", "أشهر المولات والمراكز التجارية والوجهات الترفيهية في الإمارات.", [
+                        [200, "ما اسم أكبر مول في العالم من حيث المساحة الإجمالية ويقع بجوار برج خليفة؟", "دبي مول (Dubai Mall)", "يضم نافورة دبي وأكواريوم دبي", ["دبي مول (Dubai Mall)", "مول الإمارات", "ياس مول", "مردف سيتي سنتر"]],
+                        [200, "ما اسم المول الشهير في دبي الذي يضم منحدراً للتزلج الداخلي (سكي دبي)؟", "مول الإمارات (Mall of the Emirates)", "يقع على شارع الشيخ زايد", ["مول الإمارات (Mall of the Emirates)", "ابن بطوطة مول", "دبي فيستيفال سيتي", "ميركاتو مول"]],
+                        [600, "ما اسم المول الضخم في جزيرة ياس بأبوظبي الذي يرتبط مباشرة بعالم فيراري؟", "ياس مول (Yas Mall)", "أكبر مركز تسوق في أبوظبي", ["ياس مول (Yas Mall)", "مارينا مول", "الوحدة مول", "الخالدية مول"]],
+                        [600, "ما اسم الوجهة الترفيهية الموسمية الشهيرة في دبي التي تضم أجنحة للدول وعروضاً عالمية؟", "القرية العالمية (Global Village)", "تُفتح في فصل الشتاء من كل عام", ["القرية العالمية (Global Village)", "سيتي ووك", "لا مير", "ذا بييتش"]],
+                        [800, "ما اسم المول الشهير في دبي المصمم على شكل 6 أجنحة تمثل رحلات الرحالة العربي الشهير؟", "ابن بطوطة مول", "يضم أجنحة الأندلس وتونس ومصر وبلاد فارس والهند والصين", ["ابن بطوطة مول", "وافي مول", "برجمان", "دبي هيلز مول"]],
+                        [800, "ما اسم المول الشهير في مدينة العين بإمارة أبوظبي؟", "العين مول", "يقع في قلب مدينة العين", ["العين مول", "صحارى سنتر", "الواحة مول", "منار مول"]]
+                    ]),
+                    createNamedCategory("uae", 3, "مطاعم وأكلات", "الإمارات", ICONS.uaeFood, "🇦🇪", "أشهر الأطباق والمطاعم والمقاهي الشعبية والعصرية في الإمارات.", [
+                        [200, "ما هي الحلوى الإماراتية الشعبية المقرمشة من الخارج والطرية من الداخل وتُغطى بالدبس؟", "اللقيمات", "تشتهر في رمضان والمناسبات", ["اللقيمات", "الكنافة النابلسية", "البقلاوة التركية", "المعمول"]],
+                        [200, "ما هي الأكلة الشعبية الإماراتية التي تتكون من اللحم أو الدجاج مع القمح المجروش والبهارات؟", "الهريس", "تُطبخ لساعات طويلة وتُقدم بالسمن", ["الهريس", "المسخن", "المنسف", "الكشري"]],
+                        [600, "ما هي الأكلة الشعبية المعروفة باسم «المضروبة» في المطبخ الإماراتي؟", "أرز مطبوخ ومضروب حتى يتجانس مع السمك أو الدجاج والبهارات", "تُعرف بقوامها المتجانس اللذيذ", ["أرز مطبوخ ومضروب حتى يتجانس مع السمك أو الدجاج والبهارات", "فطيرة محشوة بالجبن", "شوربة عدس باردة", "سلطة خضار مشوية"]],
+                        [600, "ما هي الحلوى الإماراتية الشعبية المصنوعة من الطحين المحمص والسكر والزعفران والهيل؟", "الخبيص", "حلوى تراثية غنية بالنكهات", ["الخبيص", "أم علي", "المهلبية", "القطايف"]],
+                        [800, "ما هي الأكلة الإماراتية التي تُقدم عادة مع «الصالونة» والليمون الأسود (اللومي)؟", "المجبوس", "أرز متبل بالبهارات الإماراتية واللومي", ["المجبوس", "المقلوبة", "الصيادية", "المندي"]],
+                        [800, "ما اسم الخبز الإماراتي الرقيق جداً الذي يُخبز على التاوة ويُدهن بالجبن والبيض أو العسل؟", "خبز الرقاق", "خبز تقليدي رقيق ومقرمش", ["خبز الرقاق", "خبز الصامولي", "خبز الباغيت", "خبز التورتيلا"]]
+                    ]),
+                    createNamedCategory("uae", 4, "جمعية", "الإمارات", ICONS.jamaiya, "🇦🇪", "ثقافة الجمعيات التعاونية والمشتريات المنزلية والأسواق في الإمارات.", [
+                        [200, "بماذا يُطلق محلياً في الإمارات على السوبرماركت التعاوني الكبير؟", "الجمعية", "مثل جمعية الاتحاد التعاونية وجمعية أبوظبي التعاونية", ["الجمعية", "البقالة الصغيرة", "المخزن المركزي", "الدكان"]],
+                        [200, "ما اسم العملة المستخدمة عند الدفع في جميع الجمعيات في الإمارات؟", "الدرهم الإماراتي", "يرمز له AED أو د.إ", ["الدرهم الإماراتي", "الدينار الكويتي", "الريال السعودي", "الدينار البحريني"]],
+                        [600, "ما اسم برنامج الولاء والبطاقة الشهيرة في جمعية الاتحاد التعاونية بدبي؟", "بطاقة تميّز", "تمنح نقاطاً وخصومات للمتسوقين", ["بطاقة تميّز", "بطاقة نول", "بطاقة سالك", "بطاقة حافلات"]],
+                        [600, "ما اسم المنتج الأساسي الذي لا يكاد يخلو منه بيت إماراتي مع القهوة؟", "التمر", "يُقدم مع القهوة العربية", ["التمر", "الزيتون", "المخلل", "الذرة"]],
+                        [800, "في أي عام تأسست جمعية الاتحاد التعاونية في دبي كأول جمعية تعاونية استهلاكية؟", "1982 م", "تضم فروعاً متعددة في دبي", ["1982 م", "1995 م", "2004 م", "1971 م"]],
+                        [800, "ما اسم الأرز الشعبي الأكثر استخداماً في المطبخ الإماراتي والخليجي للكبسة والبرياني؟", "أرز البسمتي (العيش)", "يُسمى العيش في اللهجة الإماراتية", ["أرز البسمتي (العيش)", "الأرز المصري القصير", "البرغل الخشن", "الفريكة"]]
+                    ]),
+                    createNamedCategory("uae", 5, "معالم وفخر", "الإمارات", ICONS.uae, "🇦🇪", "مدن الإمارات، الإنجازات الوطنية، التراث، وأبرز المعالم.", [
+                        [200, "ما هي عاصمة دولة الإمارات العربية المتحدة؟", "أبوظبي", "أكبر إمارة من حيث المساحة", ["أبوظبي", "دبي", "الشارقة", "العين"]],
+                        [200, "كم عدد الإمارات في دولة الإمارات العربية المتحدة؟", "7 إمارات", "أبوظبي، دبي، الشارقة، عجمان، أم القيوين، رأس الخيمة، الفجيرة", ["7 إمارات", "6 إمارات", "8 إمارات", "5 إمارات"]],
+                        [600, "ما اسم أقدم مسجد أثري قائم في إمارة الفجيرة؟", "مسجد البدية", "يتميز بقبابه الأربع", ["مسجد البدية", "مسجد الشيخ زايد", "مسجد النور", "مسجد جميرا"]],
+                        [600, "ما اسم أول رائد فضاء إماراتي صعد إلى محطة الفضاء الدولية؟", "هزاع المنصوري", "انطلق عام 2019", ["هزاع المنصوري", "سلطان النيادي", "محمد الملا", "سالم المري"]],
+                        [800, "ما اسم المسبار الإماراتي الذي وصل إلى مدار كوكب المريخ؟", "مسبار الأمل", "أول مهمة عربية لاستكشاف الكواكب", ["مسبار الأمل", "مسبار زايد", "مسبار خليفة", "مسبار المستقبل"]],
+                        [800, "ما اسم أعلى قمة جبلية في دولة الإمارات وتقع في إمارة رأس الخيمة؟", "جبل جيس", "يقع في أقصى شمال رأس الخيمة", ["جبل جيس", "جبل حفيت", "جبل علي", "جبل الظنة"]]
+                    ])
                 ]
             },
             {
                 id: "sec_reptiles",
                 title: "كائنات الزواحف",
                 categories: [
-                    {
-                        id: "rep_snakes",
-                        name: "الأفاعي والثعابين",
-                        icon: ICONS.reptiles,
-                        description: "أسئلة شيقة عن عالم الأفاعي والثعابين وأنواعها وطرق صيدها.",
-                        questions: makeQuestions("الأفاعي والثعابين", [
-                            [200, "هل تمتلك الأفاعي جفوناً متحركة تغلق بها أعينها؟", "لا، عيونها مغطاة بقشرة شفافة ثابتة", "لذلك تبدو وكأنها لا تنام أبداً"],
-                            [200, "كيف تلتقط الأفعى رائحة الفريسة وتستشعر محيطها؟", "بلسانها المشقوق الذي ينقل الجزيئات إلى عضو جاكوبسون", "تُخرج لسانها باستمرار لاختبار الهواء"],
-                            [400, "ما اسم الأفعى الشهيرة التي ترفع مقدمة جسمها وتفرد قلنسوتها عند التهديد؟", "الكوبرا", "تنتشر في أفريقيا وآسيا"],
-                            [400, "كيف تقتل الأناكوندا أو الأصلة (Python) فرائسها في الغالب؟", "بالعصر والالتفاف حتى توقف التنفس", "ليست من الأفاعي السامة بل العاصرة"],
-                            [600, "ما اسم الأفعى الصحراوية العربية الشهيرة التي تتحرك جانبياً على الرمال؟", "الأفعى المقرنة (أو أم جنيب)", "تعيش في البيئات الصحراوية الجافة"],
-                            [600, "كم يبلغ عدد فقرات العمود الفقري لدى بعض الأفاعي الضخمة تقريباً؟", "أكثر من 300 إلى 400 فقرة", "هذا ما يمنحها مرونة مذهلة في الحركة"]
-                        ])
-                    },
-                    {
-                        id: "rep_lizards",
-                        name: "السحالي والحرباء",
-                        icon: ICONS.reptiles,
-                        description: "الحرباء، الضب، الإغوانا، والقدرات العجيبة للزواحف المتسلقة.",
-                        questions: makeQuestions("السحالي والحرباء", [
-                            [200, "بماذا تشتهر الحرباء أكثر من غيرها من الزواحف؟", "بقدرتها على تغيير لون جلدها وحركة عينيها المستقلة", "كل عين يمكن أن تتحرك في اتجاه مختلف"],
-                            [200, "ماذا تفعل بعض السحالي عندما يمسك مفترس بذيلها للهروب؟", "تفصل ذيلها عمداً (تقطعه) ثم ينمو من جديد لاحقاً", "ظاهرة تُسمى التجدد الذاتي"],
-                            [400, "ما اسم الزاحف الصحراوي العربي الشهير الذي يختبئ في جحر عميق ويشتهر بذيله الحرشفي؟", "الضب", "من أشهر زواحف الصحراء العربية"],
-                            [400, "ما اسم السحلية الكبيرة التي تعيش في أمريكا الوسطى والجنوبية وتتميز بشوك يمتد على ظهرها؟", "الإغوانا (Iguana)", "كثير منها يتغذى على النباتات"],
-                            [600, "ما اسم أكبر سحلية حية في العالم وتعيش في جزر إندونيسيا؟", "تنين كومودو (Komodo Dragon)", "قد يصل طوله إلى نحو 3 أمتار"],
-                            [600, "ما اسم السحلية الصغيرة التي تستطيع الالتصاق بالأسطح الملساء والزجاج بفضل وسائد أقدامها المجهرية؟", "الوزغ / البرص (Gecko)", "تعتمد على قوى فان دير فالس المجهرية"]
-                        ])
-                    },
-                    {
-                        id: "rep_turtles_crocs",
-                        name: "السلاحف والتماسيح",
-                        icon: ICONS.reptiles,
-                        description: "السلاحف البحرية والبرية والتماسيح وقوة فكوكها ودرعها.",
-                        questions: makeQuestions("السلاحف والتماسيح", [
-                            [200, "ما الجزء الصلب الذي يحمي جسم السلحفاة من الأعلى والأسفل؟", "الدرع (أو الصدفة / القوقعة العظمية)", "العلوي يُسمى الدرع والسفلي يُسمى البلاستون"],
-                            [200, "أين تعود أنثى السلحفاة البحرية عادةً لتضع بيضها؟", "إلى الشاطئ الرملي نفسه الذي فقست فيه", "تحفر حفرة في الرمال وتغطي البيض"],
-                            [400, "ما هي السلحفاة البحرية المهددة التي تشتهر بقوقعتها المتداخلة كالقرميد؟", "سلحفاة صقرية المنقار (Hawksbill)", "تتعرض شواطئ الخليج لمواسم تعشيشها"],
-                            [400, "ما هو الحيوان الزاحف الذي يمتلك أقوى عضة مسجلة في مملكة الحيوان؟", "التمساح (خصوصاً تمساح المياه المالحة / تمساح النيل)", "قوة فكيه هائلة جداً للإمساك بالفريسة"],
-                            [600, "لماذا غالباً ما يُشاهد التمساح فاتحاً فمه على ضفاف الماء؟", "لتنظيم حرارة جسمه وتبريد رأسه عبر التبخر", "يُسمى التنظيم الحراري بالفم المفتوح"],
-                            [600, "هل الزواحف من ذوات الدم الحار أم ذوات الدم البارد (متغيرة الحرارة)؟", "من ذوات الدم البارد (متغيرة الحرارة)", "تعتمد على حرارة البيئة المحيطة لتنشيط أجسامها"]
-                        ])
-                    },
-                    {
-                        id: "rep_all_creatures",
-                        name: "كائنات الزواحف",
-                        icon: ICONS.reptiles,
-                        description: "فئة شاملة لكائنات الزواحف: أفاعي، حرباء، تنين كومودو، سلاحف، وتماسيح.",
-                        questions: makeQuestions("كائنات الزواحف", [
-                            [200, "ما اسم أكبر سحلية حية في العالم وتعيش في جزر إندونيسيا؟", "تنين كومودو (Komodo Dragon)", "من أضخم الزواحف الحية حالياً"],
-                            [200, "ما هو الحيوان الزاحف الذي يستطيع تغيير لون جلده وتحريك عينيه كل واحدة في اتجاه؟", "الحرباء", "تشتهر بالتمويه البصري"],
-                            [400, "ما اسم الزاحف البحري الذي يسبح في المحيطات ويعود للشاطئ لوضع بيضه؟", "السلحفاة البحرية", "تحمي نفسها بدرع صلب"],
-                            [400, "كيف تتذوق الأفعى وتشم محيطها باستخدام لسانها؟", "تُخرج لسانها المشقوق لالتقاط جزيئات الرائحة", "ليس للسمع بل للشم والاستشعار"],
-                            [600, "ما اسم نوع الزواحف الذي يضم التمساح والقاطور؟", "التمساحيات (Crocodilia)", "من أقدم الكائنات الزاحفة بقاءً"],
-                            [600, "ما الخاصية التي تميز جلد الزواحف وتساعدها على الاحتفاظ بالماء في البيئات الجافة؟", "الحراشف الكيراتينية الجافة المقاومة لفقدان الماء", "تساعدها على العيش بعيداً عن الماء"]
-                        ])
-                    }
+                    createNamedCategory("rep", 0, "الأفاعي والثعابين", "كائنات الزواحف", ICONS.reptiles, "", "أسئلة شيقة عن عالم الأفاعي والثعابين وأنواعها وطرق صيدها.", [
+                        [200, "هل تمتلك الأفاعي جفوناً متحركة تغلق بها أعينها؟", "لا، عيونها مغطاة بقشرة شفافة ثابتة", "لذلك تبدو وكأنها لا تنام أبداً", ["لا، عيونها مغطاة بقشرة شفافة ثابتة", "نعم، تغلقها مثل الإنسان", "تغلق عيناً واحدة فقط", "ليس لديها عيون أصلاً"]],
+                        [200, "كيف تلتقط الأفعى رائحة الفريسة وتستشعر محيطها؟", "بلسانها المشقوق الذي ينقل الجزيئات إلى عضو جاكوبسون", "تُخرج لسانها باستمرار لاختبار الهواء", ["بلسانها المشقوق الذي ينقل الجزيئات إلى عضو جاكوبسون", "بأذنيها الخارجيتين الكبيرتين", "بذيلها الطويل", "بزعانفها الجانبية"]],
+                        [600, "ما اسم الأفعى الشهيرة التي ترفع مقدمة جسمها وتفرد قلنسوتها عند التهديد؟", "الكوبرا", "تنتشر في أفريقيا وآسيا", ["الكوبرا", "الأناكوندا", "السلحفاة", "الحرباء"]],
+                        [600, "كيف تقتل الأناكوندا أو الأصلة (Python) فرائسها في الغالب؟", "بالعصر والالتفاف حتى توقف التنفس", "ليست من الأفاعي السامة بل العاصرة", ["بالعصر والالتفاف حتى توقف التنفس", "ببث السم من مسافة بعيدة", "بالصعق الكهربائي", "بمخالبها الحادة"]],
+                        [800, "ما اسم الأفعى الصحراوية العربية الشهيرة التي تتحرك جانبياً على الرمال؟", "الأفعى المقرنة (أم جنيب)", "تعيش في البيئات الصحراوية الجافة", ["الأفعى المقرنة (أم جنيب)", "الأناكوندا الخضراء", "ثعبان البحر الأزرق", "الأصلة الشبكية"]],
+                        [800, "كم يبلغ عدد فقرات العمود الفقري لدى بعض الأفاعي الضخمة تقريباً؟", "أكثر من 300 إلى 400 فقرة", "هذا ما يمنحها مرونة مذهلة في الحركة", ["أكثر من 300 إلى 400 فقرة", "33 فقرة فقط", "12 فقرة", "50 فقرة"]]
+                    ]),
+                    createNamedCategory("rep", 1, "السحالي والحرباء", "كائنات الزواحف", ICONS.reptiles, "", "الحرباء، الضب، الإغوانا، والقدرات العجيبة للزواحف المتسلقة.", [
+                        [200, "بماذا تشتهر الحرباء أكثر من غيرها من الزواحف؟", "تغيير لون جلدها وحركة عينيها المستقلة", "كل عين يمكن أن تتحرك في اتجاه مختلف", ["تغيير لون جلدها وحركة عينيها المستقلة", "الطيران لمسافات طويلة", "العيش في أعماق البحار", "إصدار زئير عالٍ"]],
+                        [200, "ماذا تفعل بعض السحالي عندما يمسك مفترس بذيلها للهروب؟", "تفصل ذيلها عمداً ثم ينمو من جديد لاحقاً", "ظاهرة تُسمى التجدد الذاتي", ["تفصل ذيلها عمداً ثم ينمو من جديد لاحقاً", "تتحول إلى كرة حديدية", "تختفي في الهواء", "تطلق حبر أسود"]],
+                        [600, "ما اسم الزاحف الصحراوي العربي الشهير الذي يختبئ في جحر عميق ويشتهر بذيله الحرشفي؟", "الضب", "من أشهر زواحف الصحراء العربية", ["الضب", "التمساح", "البطريق", "الفقمة"]],
+                        [600, "ما اسم السحلية الكبيرة التي تعيش في أمريكا الوسطى والجنوبية وتتميز بشوك يمتد على ظهرها؟", "الإغوانا (Iguana)", "كثير منها يتغذى على النباتات", ["الإغوانا (Iguana)", "الكوبرا الملكية", "السلحفاة العملاقة", "الضفدع الذهبي"]],
+                        [800, "ما اسم أكبر سحلية حية في العالم وتعيش في جزر إندونيسيا؟", "تنين كومودو (Komodo Dragon)", "قد يصل طوله إلى نحو 3 أمتار", ["تنين كومودو (Komodo Dragon)", "الوزغ المنزلي", "الحرباء القزمة", "سحلية الرمال"]],
+                        [800, "ما اسم السحلية الصغيرة التي تستطيع الالتصاق بالأسطح الملساء والزجاج بفضل وسائد أقدامها المجهرية؟", "الوزغ / البرص (Gecko)", "تعتمد على قوى مجهرية دقيقة", ["الوزغ / البرص (Gecko)", "التمساح النيلي", "السلحفاة البرية", "الأناكوندا"]]
+                    ]),
+                    createNamedCategory("rep", 2, "السلاحف والتماسيح", "كائنات الزواحف", ICONS.reptiles, "", "السلاحف البحرية والبرية والتماسيح وقوة فكوكها ودرعها.", [
+                        [200, "ما الجزء الصلب الذي يحمي جسم السلحفاة من الأعلى والأسفل؟", "الدرع (الصدفة العظمية)", "العلوي يُسمى الدرع والسفلي يُسمى البلاستون", ["الدرع (الصدفة العظمية)", "الريش الكثيف", "الفراء السميك", "الأشواك السامة"]],
+                        [200, "أين تعود أنثى السلحفاة البحرية عادةً لتضع بيضها؟", "إلى الشاطئ الرملي نفسه الذي فقست فيه", "تحفر حفرة في الرمال وتغطي البيض", ["إلى الشاطئ الرملي نفسه الذي فقست فيه", "فوق قمم الأشجار", "داخل الكهوف الجليدية", "في أعشاش الطيور"]],
+                        [600, "ما هي السلحفاة البحرية المهددة التي تشتهر بقوقعتها المتداخلة كالقرميد؟", "سلحفاة صقرية المنقار (Hawksbill)", "تتعرض شواطئ الخليج لمواسم تعشيشها", ["سلحفاة صقرية المنقار (Hawksbill)", "سلحفاة النينجا", "القاطور الأمريكي", "الإغوانا البحرية"]],
+                        [600, "ما هو الحيوان الزاحف الذي يمتلك أقوى عضة مسجلة في مملكة الحيوان؟", "التمساح", "قوة فكيه هائلة جداً للإمساك بالفريسة", ["التمساح", "الحرباء", "السلحفاة البرية", "الوزغ"]],
+                        [800, "لماذا غالباً ما يُشاهد التمساح فاتحاً فمه على ضفاف الماء؟", "لتنظيم حرارة جسمه وتبريد رأسه عبر التبخر", "يُسمى التنظيم الحراري بالفم المفتوح", ["لتنظيم حرارة جسمه وتبريد رأسه عبر التبخر", "للتغريد والغناء", "لشرب ضوء الشمس", "لتنظيف ذيله"]],
+                        [800, "هل الزواحف من ذوات الدم الحار أم ذوات الدم البارد (متغيرة الحرارة)؟", "من ذوات الدم البارد (متغيرة الحرارة)", "تعتمد على حرارة البيئة المحيطة لتنشيط أجسامها", ["من ذوات الدم البارد (متغيرة الحرارة)", "من ذوات الدم الحار مثل الثدييات", "ليس لديها دم", "حرارتها ثابتة عند 40 درجة"]]
+                    ]),
+                    createNamedCategory("rep", 3, "كائنات الزواحف", "كائنات الزواحف", ICONS.reptiles, "", "فئة شاملة لكائنات الزواحف: أفاعي، حرباء، تنين كومودو، سلاحف، وتماسيح.", [
+                        [200, "ما اسم أكبر سحلية حية في العالم وتعيش في جزر إندونيسيا؟", "تنين كومودو (Komodo Dragon)", "من أضخم الزواحف الحية حالياً", ["تنين كومودو (Komodo Dragon)", "الضب الصحراوي", "الحرباء الخضراء", "السقنقور"]],
+                        [200, "ما هو الحيوان الزاحف الذي يستطيع تغيير لون جلده وتحريك عينيه كل واحدة في اتجاه؟", "الحرباء", "تشتهر بالتمويه البصري", ["الحرباء", "التمساح", "السلحفاة", "الكوبرا"]],
+                        [600, "ما اسم الزاحف البحري الذي يسبح في المحيطات ويعود للشاطئ لوضع بيضه؟", "السلحفاة البحرية", "تحمي نفسها بدرع صلب", ["السلحفاة البحرية", "القرش الأبيض", "الدلفين", "الحوت الأزرق"]],
+                        [600, "كيف تتذوق الأفعى وتشم محيطها باستخدام لسانها؟", "تُخرج لسانها المشقوق لالتقاط جزيئات الرائحة", "ليس للسمع بل للشم والاستشعار", ["تُخرج لسانها المشقوق لالتقاط جزيئات الرائحة", "تلتقط به الموجات الصوتية", "تستخدمه للسباحة", "تضيء به في الظلام"]],
+                        [800, "ما اسم رتبة الزواحف التي تضم التمساح والقاطور؟", "التمساحيات (Crocodilia)", "من أقدم الكائنات الزاحفة بقاءً", ["التماحيات (Crocodilia)", "البرمائيات", "القوارض", "الرئيسيات"]],
+                        [800, "ما الخاصية التي تميز جلد الزواحف وتساعدها على الاحتفاظ بالماء في البيئات الجافة؟", "الحراشف الكيراتينية الجافة المقاومة لفقدان الماء", "تساعدها على العيش بعيداً عن الماء", ["الحراشف الكيراتينية الجافة المقاومة لفقدان الماء", "الجلد الرطب المخاطي", "الريش المقاوم للماء", "الصوف الكثيف"]]
+                    ])
                 ]
             },
             {
                 id: "sec_foreign_cinema",
                 title: "فن أجنبي",
                 categories: [
-                    "Marvel", "DC", "Breaking Bad", "Game Of Thrones", "Stranger Things",
-                    "Harry Potter", "Squid Game", "Star Wars", "أفلام رعب", "أفلام كلاسيك"
-                ].map((catName, index) => {
-                    const presetMap = {
-                        "Marvel": [
-                            [200, "ما اسم البطل الخارق في مارفل الذي يُعرف بـ «الرجل الحديدي» (Iron Man)؟", "توني ستارك (Tony Stark)", "مؤسس صناعات ستارك"],
-                            [200, "ما اسم الدرع الشهير الذي يحمله كابتن أمريكا؟", "درع الفايبرانيوم", "أصلب معدن في عالم مارفل"],
-                            [400, "ما اسم السلاح الأسطوري الذي يحمله ثور (Thor) في مارفل؟", "مطرقة ميولنير (Mjolnir)", "يرفعها فقط من يستحق قوتها"],
-                            [400, "ما اسم الموطن الأصلي لمملكة واكاندا؟", "أفريقيا", "تشتهر بالفايبرانيوم والتقنية المتقدمة"],
-                            [600, "كم عدد أحجار اللانهاية (Infinity Stones) في عالم مارفل السينمائي؟", "6 أحجار", "القوة، الفضاء، الواقع، الروح، الزمن، العقل"],
-                            [600, "من هو الشرير الذي جمع أحجار اللانهاية في Avengers: Infinity War؟", "ثانوس (Thanos)", "يسعى لتحقيق التوازن الكوني"]
-                        ],
-                        "DC": [
-                            [200, "ما اسم مدينة باتمان الشهيرة في عالم DC؟", "غوثام سيتي (Gotham City)", "يحميها فارس الظلام"],
-                            [200, "ما اسم الكوكب الأصلي الذي وُلد فيه سوبرمان؟", "كريبتون (Krypton)", "سُمي على اسم معدن الكريبتونيت"],
-                            [400, "ما اسم الجزيرة التي نشأت فيها وندر وومان (Wonder Woman)؟", "ثيميسيرا (Themyscira)", "جزيرة الأمازون"],
-                            [400, "ما اسم عدو باتمان اللدود المهرج صاحب الابتسامة الشهيرة؟", "الجوكر (The Joker)", "من أشهر أشرار الكوميكس"],
-                            [600, "ما اسم المعدن الأخضر الذي يضعف قوة سوبرمان؟", "الكريبتونيت (Kryptonite)", "بقايا كوكبه المدمّر"],
-                            [600, "ما اسم فريق الأبطال الخارقين الذي يضم سوبرمان وباتمان ووندر وومان؟", "رابطة العدالة (Justice League)", "تجمع أبرز أبطال DC"]
-                        ],
-                        "Breaking Bad": [
-                            [200, "ما هو الاسم الحركي الذي اشتهر به والتر وايت في مسلسل Breaking Bad؟", "هايزنبرغ (Heisenberg)", "يضع قبعة سوداء ونظارة"],
-                            [200, "ما اسم المدينة التي تدور فيها معظم أحداث المسلسل؟", "ألباكركي في ولاية نيو مكسيكو", "مدينة صحراوية في أمريكا"],
-                            [400, "ما اسم شريك والتر وايت السابق في العمل والطبخ؟", "جيسي بينكمان (Jesse Pinkman)", "عبارته الشهيرة Yo, Mr. White"],
-                            [400, "ما اسم المحامي الملتوي الذي يمثل والتر وجيسي؟", "سول غودمان (Saul Goodman)", "بطل مسلسل Better Call Saul"],
-                            [600, "ما اسم الشركة الكيميائية التي شارك والتر في تأسيسها في بداياته؟", "غراي ماتر (Gray Matter Technologies)", "تركها مبكراً وندم لاحقاً"],
-                            [600, "ما اسم المهنة الأصلية لوالتر وايت قبل دخول عالم الجريمة؟", "معلم كيمياء في مدرسة ثانوية", "بدأ الأمر بعد تشخيص مرضه"]
-                        ],
-                        "Game Of Thrones": [
-                            [200, "ما هو شعار عائلة ستارك في Game of Thrones؟", "الشتاء قادم (Winter is Coming)", "عائلة الشمال في وينترفيل"],
-                            [200, "كم عدد التنانين التي فقست لدينيريس تارغيريان في البداية؟", "3 تنانين", "دروغون، ريغال، وفيسيريون"],
-                            [400, "ما اسم السيف المصنوع من الفولاذ الفاليري الذي يحمله جون سنو؟", "لونغ كلو (Longclaw)", "أهداه إياه القائد جيور مورمونت"],
-                            [400, "ما اسم العرش الشهير الذي يتصارع عليه الجميع في ويستروس؟", "العرش الحديدي (Iron Throne)", "صُنع من سيوف الأعداء المهزومين"],
-                            [600, "ما اسم الجدار العملاق الذي يحمي الشمال في ويستروس؟", "الجدار (The Wall)", "يحرسه حرس الليل"],
-                            [600, "ما اسم شعار عائلة لانيستر؟", "اسمع زئيري / اللانيستر دائماً يسددون ديونهم", "عائلة غنية ونفوذها كبير في كينغز لاندينغ"]
-                        ],
-                        "Stranger Things": [
-                            [200, "ما اسم الفتاة ذات القدرات الذهنية والرقم 011 في Stranger Things؟", "إليفن (Eleven / إيل)", "تحب وافل Eggo"],
-                            [200, "ما اسم البُعد المظلم الموازي لبلدة هوكينز؟", "العالم المقلوب (The Upside Down)", "تظهر فيه وحوش الديموغورغون"],
-                            [400, "ما اسم لعبة الطاولة التي يلعبها الأصدقاء في بداية المسلسل؟", "Dungeons & Dragons", "لعبة تقمص أدوار كلاسيكية"],
-                            [400, "ما اسم البلدة الصغيرة التي تقع فيها أحداث المسلسل؟", "هوكينز (Hawkins)", "بلدة في ولاية إنديانا"],
-                            [600, "ما اسم المختبر الحكومي السري المرتبط بالتجارب في المسلسل؟", "مختبر هوكينز الوطني", "أجرى تجارب على الأطفال"],
-                            [600, "ما اسم الأغنية الشهيرة لكيت بوش التي أنقذت ماكس في الموسم الرابع؟", "Running Up That Hill", "أغنية ثمانينيات أيقونية"]
-                        ],
-                        "Harry Potter": [
-                            [200, "ما اسم مدرسة السحر والشعوذة التي يدرس فيها هاري بوتر؟", "هوغوورتس (Hogwarts)", "تضم منازل غريفندور وسليذرين ورافنكلو وهفلباف"],
-                            [200, "ما اسم عدو هاري بوتر الرئيسي الذي لا يُسمى اسمه غالباً؟", "لورد فولدمورت (توم ريدل)", "صاحب عصا الطقس/العنقاء"],
-                            [400, "ما اسم منزل هاري بوتر في هوغوورتس؟", "غريفندور (Gryffindor)", "شعاره الأسد وألوانه الأحمر والذهبي"],
-                            [400, "ما اسم رياضة السحر الشهيرة التي تُلعب على المكانس الطائرة؟", "الكويدتش (Quidditch)", "تضم السنيتش الذهبية"],
-                            [600, "ما اسم البومة البيضاء الخاصة بهاري بوتر؟", "هيدويغ (Hedwig)", "رفيقته الوفية"],
-                            [600, "كم عدد الهوركروكسات (Horcruxes) التي قسّم فولدمورت روحه إليها؟", "7 أجزاء (6 أجزاء صنعها والسابعة في جسده)", "مخبأة في أشياء وشخصيات متعددة"]
-                        ],
-                        "Squid Game": [
-                            [200, "ما هو رقم اللاعب الرئيسي جي هون في Squid Game؟", "اللاعب رقم 456", "يشارك في الألعاب الكورية المميتة"],
-                            [200, "ما هي اللعبة الأولى الشهيرة التي تظهر فيها دمية عملاقة وتقول «الضوء الأحمر، الضوء الأخضر»؟", "لعبة ضوء أحمر ضوء أخضر (Red Light, Green Light)", "تتحرك فيها اللاعبون فقط عندما تدير الدمية رأسها"],
-                            [400, "ما هي الأشكال الهندسية الثلاثة التي يرتديها الحراس على أقنعتهم؟", "الدائرة، المثلث، والمربع", "كل شكل يمثل رتبة معينة"],
-                            [400, "ما اسم لعبة السكر الشهيرة التي يُطلب فيها قص الشكل دون كسره؟", "دالغونا (Dalgona)", "مثل المظلة أو النجمة أو الدائرة"],
-                            [600, "ما هي قيمة الجائزة الكبرى بالوون الكوري في المسلسل؟", "45.6 مليار وون كوري", "تساوي عدد اللاعبين 456 مضروباً في 100 مليون"],
-                            [600, "ما اسم الشرطي الذي تسلل إلى الجزيرة بحثاً عن شقيقه؟", "هوانغ جون هو", "ارتدى زي أحد الحراس"]
-                        ],
-                        "Star Wars": [
-                            [200, "ما هي الجملة الشهيرة المرتبطة بـ «القوة» في Star Wars؟", "لتكن القوة معك (May the Force be with you)", "من أشهر عبارات السينما العالمية"],
-                            [200, "ما اسم السلاح المضيء الشهير الذي يستخدمه الجيداي والسث؟", "السيف الضوئي (Lightsaber)", "له ألوان متعددة مثل الأزرق والأخضر والأحمر"],
-                            [400, "من هي الشخصية الشهيرة ذات القناع الأسود والتنفس المميز؟", "دارث فيدر (Darth Vader)", "من أيقونات السينما"],
-                            [400, "ما اسم سفينة الفضاء الشهيرة التابعة لهان سولو؟", "ميلينيوم فالكون (Millennium Falcon)", "أسرع سفينة في المجرة"],
-                            [600, "ما اسم المعلم الصغير الحكيم الذي درّب لوك سكاي ووكر؟", "يودا (Yoda)", "يتحدث بترتيب كلمات مميز"],
-                            [600, "ما اسم الروبوت الصغير الأسطواني ذو اللونين الأبيض والأزرق؟", "آر تو دي تو (R2-D2)", "يرافق سي ثري بي أو (C-3PO)"]
-                        ]
-                    };
-
-                    return {
-                        id: `cin_${index}_${catName.replace(/[^a-zA-Z0-9\u0600-\u06FF]/g, '_')}`,
-                        name: catName,
-                        icon: ICONS.cinema,
-                        description: `أسئلة وتحديات ممتعة في فئة «${catName}» ضمن قسم فن أجنبي.`,
-                        questions: buildFullCategoryQuestions(catName, "فن أجنبي", presetMap[catName])
-                    };
-                })
+                    "Marvel", "Bollywood", "طاقم الفيلم", "قصة فيلم أجنبي", "فن أجنبي",
+                    "The Sopranos", "مسيرة فنان أجنبي", "طقم فنان أجنبي", "أفلام رعب", "أفلام كلاسيك", "DC",
+                    "Breaking Bad", "House of the Dragon", "Game Of Thrones", "The Boys", "Friends", "The Office",
+                    "Big Bang Theory", "Dark", "From", "Vikings", "The Walking Dead", "Peaky Blinders", "Dexter",
+                    "Prison Break", "Harry Potter", "Invincible", "Brooklyn 99", "Suits", "Better Call Saul",
+                    "Stranger Things", "Cobra Kai", "Squid Game", "Star Wars", "Lord of the Rings"
+                ].map((name, idx) => createNamedCategory("cin", idx, name, "فن أجنبي", ICONS.cinema, ""))
             },
             {
                 id: "sec_thinking",
-                title: "تفكير",
+                title: "تفكير وألغاز",
                 categories: [
-                    "ألغاز", "خمن الصورة", "بدون نقاط", "ركز شوي", "أمثال وألغاز", "زووم"
-                ].map((catName, index) => {
-                    const presetMap = {
-                        "ألغاز": [
-                            [200, "ما هو الشيء الذي كلما زاد نقص؟", "العمر", "كلما مر عام ازداد عمرك ونقص ما بقي"],
-                            [200, "ما هو الشيء الذي يكتب ولا يقرأ؟", "القلم", "أداة الكتابة"],
-                            [400, "ما هو الشيء الذي يمشي بلا أرجل ويدخل في الآذان؟", "الصوت", "ينتقل عبر الهواء"],
-                            [400, "بيت بلا أبواب ولا نوافذ؟", "بيت الشعر (أو بيضة)", "له أركان وأبيات"],
-                            [600, "شيء موجود في السماء وإذا أضفت له حرفاً أصبح في الأرض؟", "نجم (إذا أضفت له حرفاً يصبح منجم)", "فكر في حرف الميم"],
-                            [600, "ما هو الشيء الذي له رأس وليس له عينان؟", "الدبوس (أو العود / الجبل)", "يُستخدم لتثبيت الأوراق"]
-                        ],
-                        "أمثال وألغاز": [
-                            [200, "أكمل المثل: «اللي ما يعرف الصقر...»", "يشويه", "يُقال لمن يجهل قيمة الشيء"],
-                            [200, "أكمل المثل: «عصفور في اليد خير من...»", "عشرة على الشجرة", "يدل على القناعة بالمضمون"],
-                            [400, "ماذا يعني المثل: «رجع بخُفَّي حُنين»؟", "عاد خائباً دون تحقيق ما أراد", "قصة شعبية عربية مشهورة"],
-                            [400, "أكمل البيت الشهير: «على قدر أهل العزم تأتي العزائم...»", "وتأتي على قدر الكرام المكارم", "من شعر المتنبي"],
-                            [600, "ماذا يعني المثل: «وافق شنٌّ طبقة»؟", "تطابق شخصين أو شيئين في الصفات تماماً", "يُضرب للتوافق التام"],
-                            [600, "أكمل المثل: «إن غاب القط العب يا...»", "فار (فأر)", "يُضرب عند غياب الرقيب"]
-                        ],
-                        "بدون نقاط": [
-                            [200, "اذكر كلمة من 3 أحرف بدون نقاط تدل على ملك الغابة؟", "أسد (أ س د)", "لا توجد نقاط على أي حرف فيها"],
-                            [200, "اذكر مدينة عربية من 4 أحرف بدون نقاط؟", "مصر / مكة / جدة / عُمان", "اختر اسماً خالياً من النقاط"],
-                            [400, "اذكر كلمة من 3 أحرف بدون نقاط تعني عكس الحرب؟", "سلم (س ل م)", "السلام والوئام"],
-                            [400, "اذكر كلمة من 3 أحرف بدون نقاط تطلق على الطريق؟", "درب (د ر ب)", "طريق أو ممر"],
-                            [600, "ما الكلمة من 3 أحرف بدون نقاط التي تدل على صوت السحاب والمطر؟", "رعد (ر ع د)", "أحرفه ر - ع - د"],
-                            [600, "ما الكلمة من 3 أحرف بدون نقاط التي تعني «عكس كسل»؟", "جد (ج د)", "الجد والاجتهاد"]
-                        ]
-                    };
-
-                    return {
-                        id: `thk_${index}_${catName.replace(/[^a-zA-Z0-9\u0600-\u06FF]/g, '_')}`,
-                        name: catName,
-                        icon: ICONS.riddles,
-                        description: `تحدي «${catName}» لاختبار سرعة البديهة والملاحظة والتفكير.`,
-                        questions: buildFullCategoryQuestions(catName, "تفكير", presetMap[catName])
-                    };
-                })
+                    "ألغاز", "بدون نقاط", "ركز شوي", "أمثال وألغاز"
+                ].map((name, idx) => createNamedCategory("thk", idx, name, "تفكير وألغاز", ICONS.riddles, ""))
             },
             {
                 id: "sec_world",
-                title: "دول",
+                title: "دول العالم",
                 categories: [
                     "ما هي الدولة", "عواصم", "أعلام", "عملات", "سياحة وسفر", "جغرافيا"
-                ].map((catName, index) => {
-                    const presetMap = {
-                        "ما هي الدولة": [
-                            [200, "ما هي الدولة العربية التي تشتهر بالأهرامات ونهر النيل؟", "مصر", "تقع في شمال شرق أفريقيا"],
-                            [200, "ما هي الدولة الخليجية التي تضم برج خليفة ودبي مول؟", "الإمارات العربية المتحدة", "عاصمتها أبوظبي"],
-                            [400, "ما هي الدولة التي تُعرف بـ «أرض الساموراي» وشعارها الشمس المشرقة؟", "اليابان", "عاصمتها طوكيو"],
-                            [400, "ما هي أكبر دولة في العالم من حيث المساحة الجغرافية؟", "روسيا", "تمتد عبر أوروبا وآسيا"],
-                            [600, "ما هي الدولة التي تضم برج إيفل ومتحف اللوفر في عاصمتها؟", "فرنسا", "عاصمتها باريس"],
-                            [600, "ما هي الدولة التي تقع في أمريكا الجنوبية وتشتهر باللغة البرتغالية والأمازون؟", "البرازيل", "أكبر دولة في أمريكا الجنوبية"]
-                        ],
-                        "عواصم": [
-                            [200, "ما هي عاصمة المملكة العربية السعودية؟", "الرياض", "تقع في منطقة نجد"],
-                            [200, "ما هي عاصمة دولة قطر؟", "الدوحة", "تطل على الخليج العربي"],
-                            [400, "ما هي عاصمة المملكة المتحدة (بريطانيا)؟", "لندن", "يمر بها نهر التايمز"],
-                            [400, "ما هي عاصمة تركيا؟", "أنقرة", "وليست إسطنبول"],
-                            [600, "ما هي عاصمة أستراليا؟", "كانبرا", "تقع بين سيدني وملبورن"],
-                            [600, "ما هي عاصمة كندا؟", "أوتاوا", "تقع في مقاطعة أونتاريو"]
-                        ],
-                        "أعلام": [
-                            [200, "ما لون العلم الرسمي لدولة اليابان في وسطه؟", "قرص أحمر على خلفية بيضاء", "يرمز إلى الشمس المشرقة"],
-                            [200, "كم عدد النجوم في علم الولايات المتحدة الأمريكية؟", "50 نجمة", "تمثل الولايات الخمسين"],
-                            [400, "ما الشجرة الخضراء الموجودة في وسط علم لبنان؟", "شجرة الأرز", "رمز تاريخي للبنان"],
-                            [400, "ما الرمز الموجود في وسط علم كوريا الجنوبية؟", "رمز الين واليانغ (التايغوك) وحوله خطوط سوداء", "يعبر عن التوازن والانسجام"],
-                            [600, "ما هي الدولة العربية التي يغلب على علمها اللون الأخضر وفي وسطه شهادة التوحيد وسيف؟", "المملكة العربية السعودية", "لا يُنكس تقديراً للشهادة"],
-                            [600, "ما هي الدولة التي يتميز علمها بوجود ورقة قيقب حمراء في المنتصف؟", "كندا", "ورقة القيقب رمز كندي معروف"]
-                        ]
-                    };
-
-                    return {
-                        id: `wld_${index}_${catName.replace(/[^a-zA-Z0-9\u0600-\u06FF]/g, '_')}`,
-                        name: catName,
-                        icon: ICONS.world,
-                        description: `أسئلة وتحديات في فئة «${catName}» ضمن قسم الدول والعالم.`,
-                        questions: buildFullCategoryQuestions(catName, "دول", presetMap[catName])
-                    };
-                })
+                ].map((name, idx) => createNamedCategory("wld", idx, name, "دول العالم", ICONS.world, ""))
+            },
+            {
+                id: "sec_general",
+                title: "عام",
+                categories: [
+                    "معلومات عامة", "سيرة ذاتية", "تاريخ", "روايات", "عالم الشعر", "نحو وإعراب", "لغة وأدب",
+                    "براداة", "منتجات", "شعارات عالمية", "تطبيقات", "شعارات", "عالم الحيوان", "تكنولوجيا",
+                    "منو المشهور", "مين المؤثر", "طب الأسنان", "طب عام", "عطور عربية",
+                    "عطور عالمية", "أهل البر", "أهل البحر", "ميمز", "AI", "ترتيب", "حروف إنجليزي", "سيارات",
+                    "Falcons", "عمر يجرب", "سفرة رمضان", "مشاهير صغار", "مسابيح", "عالم الساعات"
+                ].map((name, idx) => createNamedCategory("gen", idx, name, "عام", ICONS.general, ""))
+            },
+            {
+                id: "sec_islamic",
+                title: "إسلامي",
+                categories: [
+                    "معاني القرآن", "الصحابة", "ترتيب إسلامي", "قصص الأنبياء", "السيرة النبوية", "القرآن",
+                    "إسلامي", "أحاديث", "أناشيد", "جزء تبارك", "جزء عم"
+                ].map((name, idx) => createNamedCategory("isl", idx, name, "إسلامي", ICONS.islamic, ""))
+            },
+            {
+                id: "sec_football",
+                title: "كرة قدم",
+                categories: [
+                    "رقم اللاعب", "مسيرة لاعب", "مدربين", "دوري أبطال أوروبا", "كأس العالم",
+                    "كرة قدم عالمية", "المنتخب السعودي", "الدوري السعودي", "تحدي اللاعبين", "الدوري الكويتي",
+                    "من سجل الهدف", "اسم اللاعب", "من هو اللاعب", "اسم الدوري",
+                    "شعارات كروية", "كرة قدم إماراتية", "كرة قدم قطرية", "كرة قدم بحرينية",
+                    "C.Ronaldo", "Messi", "كباتن كأس العالم", "ترتيب كروي", "لاعبين صغار",
+                    "UCL 26/27", "PL 26/27", "أمم أوروبا", "كوبا أمريكا", "كأس العالم 26", "خليجي 27",
+                    "كأس الخليج", "UCL 24/25", "PL 24/25", "PL 25/26", "القادسية", "النصر", "الهلال",
+                    "دوري روشن 26/27", "الكلاسيكو", "ملاعب", "تشكيلات", "لاعب | نادي | مدرب"
+                ].map((name, idx) => createNamedCategory("fb", idx, name, "كرة قدم", ICONS.football, ""))
+            },
+            {
+                id: "sec_sports",
+                title: "رياضة",
+                categories: [
+                    "بادل", "تنس", "كرة يد كويتية", "رياضة", "UFC", "NBA", "مصارعة",
+                    "كرة سلة بحرينية", "Formula 1", "Bodybuilding"
+                ].map((name, idx) => createNamedCategory("spt", idx, name, "رياضة", ICONS.sports, ""))
+            },
+            {
+                id: "sec_games",
+                title: "ألعاب",
+                categories: [
+                    "Red Dead", "Call of Duty", "Video Games", "Overwatch", "Mobile Legends", "Valorant",
+                    "League of Legends", "Resident Evil", "Fortnite", "Elden Ring", "FIFA", "Minecraft"
+                ].map((name, idx) => createNamedCategory("gm", idx, name, "ألعاب", ICONS.games, ""))
             }
         ];
 
         /* ================= STATE & LOCAL STORAGE ================= */
-        const STORAGE_KEY = "seen_jeem_royal_vip_powers_v1";
+        const STORAGE_KEY = "ak_game_royal_vip_v6";
 
         function createDefaultLifelines() {
             return {
                 1: { trap: true, sitback: true, pit: true, call: true, twoans: true },
                 2: { trap: true, sitback: true, pit: true, call: true, twoans: true }
+            };
+        }
+
+        function createDefaultOptionReveals() {
+            return {
+                1: { used: 0, max: 3 },
+                2: { used: 0, max: 3 }
             };
         }
 
@@ -2492,7 +2525,7 @@
 
         let selectedCategoryIds = [];
         let gameState = {
-            gameName: "ديوانية سين جيم VIP",
+            gameName: "بطولة اك جيم VIP",
             team1Name: "فريق الصقور",
             team2Name: "فريق الذيابة",
             team1Score: 0,
@@ -2501,6 +2534,7 @@
             boardCategories: [],
             usedTiles: {},
             lifelines: createDefaultLifelines(),
+            optionReveals: createDefaultOptionReveals(),
             activePowers: createDefaultActivePowers(),
             stats: { t1Correct: 0, t2Correct: 0 }
         };
@@ -2539,6 +2573,10 @@
                         lifelines: {
                             1: { trap: true, sitback: true, pit: true, call: true, twoans: true, ...(parsed.gameState.lifelines?.[1] || {}) },
                             2: { trap: true, sitback: true, pit: true, call: true, twoans: true, ...(parsed.gameState.lifelines?.[2] || {}) }
+                        },
+                        optionReveals: {
+                            1: { used: 0, max: 3, ...(parsed.gameState.optionReveals?.[1] || {}) },
+                            2: { used: 0, max: 3, ...(parsed.gameState.optionReveals?.[2] || {}) }
                         },
                         activePowers: {
                             ...createDefaultActivePowers(),
@@ -2723,7 +2761,10 @@
 
                         const artBox = document.createElement("div");
                         artBox.className = "cat-card-art";
-                        artBox.innerHTML = renderCategoryArt(cat, 68) + (cat.flag ? `<span class="cat-flag-dot">${cat.flag}</span>` : "");
+                        artBox.innerHTML =
+                            renderCategoryArt(cat, 68) +
+                            (cat.flag ? `<span class="cat-flag-dot">${cat.flag}</span>` : "") +
+                            `<span class="cat-cover-badge">${getCategoryCoverTag(section.title)}</span>`;
 
                         const footer = document.createElement("div");
                         footer.className = "cat-card-footer";
@@ -2747,7 +2788,7 @@
                         <div style="text-align:center; padding: 50px 20px; background: var(--glass-panel); border: 1px solid var(--gold-dim); border-radius: 22px;">
                             <div style="font-size: 2.5rem; margin-bottom: 10px;">🔎</div>
                             <div style="font-weight: 900; font-size: 1.15rem; color: var(--gold-bright);">لا توجد فئات مطابقة للبحث</div>
-                            <div style="color: var(--text-muted); font-size: 0.9rem; margin-top: 4px;">جرّب البحث عن: الإمارات، زواحف، Marvel، ألغاز، دول، كرة القدم</div>
+                            <div style="color: var(--text-muted); font-size: 0.9rem; margin-top: 4px;">جرّب البحث عن: الإمارات، زواحف، Marvel، ألغاز، دول، كرة قدم</div>
                         </div>
                     `;
                 }
@@ -2765,11 +2806,29 @@
             SFX.click();
             document.getElementById("infoModalIcon").innerHTML = renderCategoryArt(cat, 62);
             document.getElementById("infoModalTitle").innerText = cat.name;
-            document.getElementById("infoModalDesc").innerText = cat.description || "فئة متنوعة تضم 6 أسئلة ممتعة ومشوقة.";
+            document.getElementById("infoModalDesc").innerText = cat.description || "فئة نصية متنوعة تضم 50 سؤالاً ممتعاً ومشوقاً.";
             document.getElementById("infoModal").classList.add("open");
         }
 
         /* ================= GAME BOARD & SCORING ================= */
+        function shuffleQuestionsPool(questionsList) {
+            const list = Array.isArray(questionsList) ? [...questionsList] : [];
+            for (let i = list.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                const temp = list[i];
+                list[i] = list[j];
+                list[j] = temp;
+            }
+            return list;
+        }
+
+        function buildRandomizedBoardCategories(categoriesList) {
+            return (categoriesList || []).map(cat => ({
+                ...cat,
+                questions: shuffleQuestionsPool(cat.questions)
+            }));
+        }
+
         function startGame() {
             if (selectedCategoryIds.length !== 6) return;
             SFX.fanfare();
@@ -2778,16 +2837,19 @@
             const chosen = selectedCategoryIds.map(id => allCats.find(c => c.id === id)).filter(Boolean);
             if (chosen.length !== 6) return;
 
+            const randomizedBoardCats = buildRandomizedBoardCategories(chosen);
+
             gameState = {
-                gameName: document.getElementById("gameNameInput").value.trim() || "ديوانية سين جيم VIP",
+                gameName: document.getElementById("gameNameInput").value.trim() || "بطولة اك جيم VIP",
                 team1Name: document.getElementById("team1Input").value.trim() || "فريق الصقور",
                 team2Name: document.getElementById("team2Input").value.trim() || "فريق الذيابة",
                 team1Score: 0,
                 team2Score: 0,
                 currentTurn: 1,
-                boardCategories: chosen,
+                boardCategories: randomizedBoardCats,
                 usedTiles: {},
                 lifelines: createDefaultLifelines(),
+                optionReveals: createDefaultOptionReveals(),
                 activePowers: createDefaultActivePowers(),
                 stats: { t1Correct: 0, t2Correct: 0 }
             };
@@ -2804,11 +2866,28 @@
 
         function resetCurrentBoard() {
             SFX.click();
+            gameState.boardCategories = buildRandomizedBoardCategories(gameState.boardCategories);
             gameState.team1Score = 0;
             gameState.team2Score = 0;
             gameState.currentTurn = 1;
             gameState.usedTiles = {};
             gameState.lifelines = createDefaultLifelines();
+            gameState.optionReveals = createDefaultOptionReveals();
+            gameState.activePowers = createDefaultActivePowers();
+            gameState.stats = { t1Correct: 0, t2Correct: 0 };
+            saveStateToLocal();
+            renderBoard();
+            showToast("تمت إعادة ضبط الجولة وخلط الأسئلة عشوائياً!");
+        }
+
+        function resetCurrentBoard() {
+            SFX.click();
+            gameState.team1Score = 0;
+            gameState.team2Score = 0;
+            gameState.currentTurn = 1;
+            gameState.usedTiles = {};
+            gameState.lifelines = createDefaultLifelines();
+            gameState.optionReveals = createDefaultOptionReveals();
             gameState.activePowers = createDefaultActivePowers();
             gameState.stats = { t1Correct: 0, t2Correct: 0 };
             saveStateToLocal();
@@ -2819,7 +2898,9 @@
         function renderPowerStatusTags(team) {
             const ap = gameState.activePowers || createDefaultActivePowers();
             const opponent = team === 1 ? 2 : 1;
-            const tags = [];
+            const rev = gameState.optionReveals?.[team] || { used: 0, max: 3 };
+            const revLeft = Math.max(0, (rev.max || 3) - (rev.used || 0));
+            const tags = [`<span class="power-tag">🔓 خيارات: ${revLeft}/3</span>`];
 
             if (ap.trapSetBy === team) {
                 tags.push(`<span class="power-tag trap">🪤 فخ منصوب ضد ${opponent === 1 ? gameState.team1Name : gameState.team2Name}</span>`);
@@ -2889,6 +2970,11 @@
 
             let remaining = 0;
             const totalQuestions = gameState.boardCategories.length * 6;
+            const tierRows = [
+                { pts: 200, label: "سهل • 200" },
+                { pts: 600, label: "وسط • 600" },
+                { pts: 800, label: "صعب • 800" }
+            ];
 
             gameState.boardCategories.forEach(cat => {
                 let answeredCount = 0;
@@ -2898,11 +2984,6 @@
                     } else {
                         remaining++;
                     }
-                }
-
-                const remText = document.getElementById("remainingQuestionsText");
-                if (remText) {
-                    remText.innerText = `الأسئلة المتبقية: ${remaining} / ${totalQuestions}`;
                 }
 
                 const col = document.createElement("div");
@@ -2922,22 +3003,25 @@
                 rowsStack.className = "tiles-rows-stack";
 
                 for (let row = 0; row < 3; row++) {
+                    const tierInfo = tierRows[row] || { pts: 200, label: "200" };
                     const splitRow = document.createElement("div");
                     splitRow.className = "point-split-row";
 
                     [row * 2, row * 2 + 1].forEach((qIndex, sideIdx) => {
-                        const qObj = cat.questions[qIndex];
                         const tileKey = `${cat.id}_${qIndex}`;
                         const isUsed = !!gameState.usedTiles[tileKey];
+                        const qObj = Array.isArray(cat.questions) ? cat.questions[qIndex] : null;
+                        const tilePoints = qObj && typeof qObj.points === "number" ? qObj.points : tierInfo.pts;
+                        const tileLevel = (qObj && qObj.level) || (tilePoints === 200 ? "سهل" : tilePoints === 600 ? "وسط" : "صعب");
 
                         const btn = document.createElement("button");
                         btn.type = "button";
                         btn.className = `point-tile-btn ${sideIdx === 0 ? "side-t1" : "side-t2"}`;
-                        btn.innerText = qObj.points;
+                        btn.innerText = `${tilePoints} • ${tileLevel}`;
                         btn.disabled = isUsed;
                         btn.onclick = () => {
                             SFX.click();
-                            openQuestion(cat, qIndex);
+                            openQuestion(cat, qIndex, tilePoints);
                         };
                         splitRow.appendChild(btn);
                     });
@@ -2949,6 +3033,9 @@
                 col.appendChild(rowsStack);
                 grid.appendChild(col);
             });
+
+            const remText = document.getElementById("remainingQuestionsText");
+            if (remText) remText.innerText = `الأسئلة المتبقية: ${remaining} / ${totalQuestions}`;
 
             if (remaining === 0) {
                 setTimeout(endGameNow, 650);
@@ -3092,10 +3179,7 @@
             const banner = document.getElementById("powersActiveBanner");
             const chipsEl = document.getElementById("powersBannerChips");
             const trapArea = document.getElementById("trapActionArea");
-            const dualBox = document.getElementById("dualChoicesBox");
-            const dualTitle = document.getElementById("dualChoicesTitle");
-            const dualGrid = document.getElementById("dualOptionsGrid");
-            if (!banner || !chipsEl || !trapArea || !dualBox || !dualTitle || !dualGrid) return;
+            if (!banner || !chipsEl || !trapArea) return;
 
             const ap = gameState.activePowers || createDefaultActivePowers();
             const chips = [];
@@ -3125,92 +3209,31 @@
                 trapArea.innerHTML = "";
             }
 
-            if (ap.twoAnsActiveForTeam && activeQuestionContext) {
-                dualBox.style.display = "block";
-                dualTitle.innerText = `✌️ جاوب جوابين (${getTeamDisplayName(ap.twoAnsActiveForTeam)}) — المتبقي: ${ap.twoAnsAttemptsLeft} محاولات`;
-                if (dualGrid.children.length === 0) {
-                    const correctAns = activeQuestionContext.qObj.a;
-                    const distractors = [
-                        "خيار بديل أول",
-                        "خيار بديل ثاني",
-                        "خيار بديل ثالث"
-                    ];
-                    const candidates = [correctAns, ...distractors.slice(0, 2)].sort(() => Math.random() - 0.5);
-                    candidates.forEach(optionText => {
-                        const optBtn = document.createElement("button");
-                        optBtn.type = "button";
-                        optBtn.className = "dual-opt-btn";
-                        optBtn.innerText = optionText;
-                        optBtn.onclick = () => {
-                            if (optBtn.disabled) return;
-                            const curAp = gameState.activePowers || createDefaultActivePowers();
-                            if (optionText === correctAns) {
-                                optBtn.classList.add("correct-guess");
-                                SFX.select();
-                                showToast("✅ إجابة صحيحة! يمكنك إظهار الإجابة واحتساب النقاط.");
-                                revealAnswer();
-                            } else {
-                                optBtn.disabled = true;
-                                optBtn.classList.add("wrong-guess");
-                                curAp.twoAnsAttemptsLeft = Math.max(0, (curAp.twoAnsAttemptsLeft || 1) - 1);
-                                gameState.activePowers = curAp;
-                                SFX.buzzer();
-                                renderActiveQuestionPowersUI();
-                                if (curAp.twoAnsAttemptsLeft === 0) {
-                                    showToast("❌ انتهت محاولتا «جاوب جوابين»!");
-                                } else {
-                                    showToast("❌ محاولة خاطئة، تبقّت لك محاولة واحدة!");
-                                }
-                            }
-                        };
-                        dualGrid.appendChild(optBtn);
-                    });
-                }
-            } else {
-                dualBox.style.display = "none";
-                dualGrid.innerHTML = "";
-            }
-
             banner.classList.toggle("show", chips.length > 0);
         }
 
-        function useDoublePoints(team) {
-            if (!gameState.lifelines[team].double) return;
-            if (gameState.doubleArmedForTeam === team) {
-                gameState.doubleArmedForTeam = null;
-                SFX.deselect();
-                showToast("تم إلغاء تفعيل دبل النقاط.");
-            } else {
-                gameState.doubleArmedForTeam = team;
-                SFX.select();
-                const tName = team === 1 ? gameState.team1Name : gameState.team2Name;
-                showToast(`⚡ ${tName} فعّل دبل النقاط للسؤال القادم!`);
-            }
-            saveStateToLocal();
-            renderBoard();
-        }
-
         function useCallFriend(team) {
-            if (!gameState.lifelines[team].call) return;
-            gameState.lifelines[team].call = false;
+            const ll = gameState.lifelines[team];
+            if (!ll || !ll.call) return;
+            ll.call = false;
             SFX.ring();
             saveStateToLocal();
             renderBoard();
 
             let callSec = 30;
-            const callDigits = document.getElementById("callTimerDigits");
-            if (callDigits) callDigits.innerText = callSec;
+            const digits = document.getElementById("callTimerDigits");
+            if (digits) digits.innerText = callSec;
             document.getElementById("callModal").classList.add("open");
 
             clearInterval(callTimerInterval);
             callTimerInterval = setInterval(() => {
                 callSec--;
-                if (callDigits) callDigits.innerText = Math.max(0, callSec);
-                if (callSec <= 10 && callSec > 0) SFX.tick();
+                if (digits) digits.innerText = Math.max(0, callSec);
+                if (callSec <= 5 && callSec > 0) SFX.tick();
                 if (callSec <= 0) {
                     clearInterval(callTimerInterval);
                     SFX.buzzer();
-                    if (callDigits) callDigits.innerText = "انتهى!";
+                    closeCallModal();
                 }
             }, 1000);
         }
@@ -3220,31 +3243,169 @@
             closeModal("callModal");
         }
 
-        function useHintLifeline(team) {
-            if (!gameState.lifelines[team].hint) return;
-            if (!activeQuestionContext) {
-                SFX.buzzer();
-                showToast("افتح سؤالاً أولاً ثم اضغط على زر التلميح!");
+        /* ================= PAID OPTIONS REVEAL (-100 PTS, 3 ATTEMPTS PER TEAM) ================= */
+        function getOptionRevealTeam() {
+            const ap = gameState.activePowers || createDefaultActivePowers();
+            if (ap.frozenTeam === gameState.currentTurn) {
+                return gameState.currentTurn === 1 ? 2 : 1;
+            }
+            return gameState.currentTurn;
+        }
+
+        function updateRevealOptionsButtonState() {
+            const btn = document.getElementById("revealOptionsBtn");
+            const badge = document.getElementById("mcqAttemptBadge");
+            const grid = document.getElementById("mcqOptionsGrid");
+            if (!btn || !badge || !grid) return;
+
+            const isRevealed = grid.style.display === "grid";
+            const targetTeam = getOptionRevealTeam();
+            const teamName = getTeamDisplayName(targetTeam);
+            const rev = gameState.optionReveals?.[targetTeam] || { used: 0, max: 3 };
+            const left = Math.max(0, (rev.max || 3) - (rev.used || 0));
+
+            if (isRevealed) {
+                btn.style.display = "none";
+                badge.innerText = `تم إظهار الخيارات لـ ${teamName} (متبقي له ${left}/${rev.max || 3} محاولات)`;
                 return;
             }
-            gameState.lifelines[team].hint = false;
+
+            btn.style.display = "flex";
+            btn.disabled = left <= 0;
+            btn.innerText = left > 0
+                ? `🔓 إظهار الخيارات لـ ${teamName} (-100 نقطة | متبقي ${left}/${rev.max || 3})`
+                : `🔒 نفذت محاولات إظهار الخيارات لـ ${teamName} (0/3)`;
+            badge.innerText = `مخفية — يكلف إظهارها 100 نقطة (${teamName}: ${left}/${rev.max || 3} محاولات)`;
+        }
+
+        function revealQuestionOptionsWithCost() {
+            if (!activeQuestionContext) return;
+            const grid = document.getElementById("mcqOptionsGrid");
+            if (!grid || grid.style.display === "grid") return;
+
+            const targetTeam = getOptionRevealTeam();
+            const teamName = getTeamDisplayName(targetTeam);
+            if (!gameState.optionReveals) {
+                gameState.optionReveals = createDefaultOptionReveals();
+            }
+            const rev = gameState.optionReveals[targetTeam] || { used: 0, max: 3 };
+            const maxAttempts = rev.max || 3;
+
+            if ((rev.used || 0) >= maxAttempts) {
+                SFX.buzzer();
+                showToast(`لقد استخدم ${teamName} جميع محاولات إظهار الخيارات (${maxAttempts}/${maxAttempts}).`);
+                updateRevealOptionsButtonState();
+                return;
+            }
+
+            rev.used = (rev.used || 0) + 1;
+            gameState.optionReveals[targetTeam] = rev;
+
+            if (targetTeam === 1) {
+                gameState.team1Score = Math.max(0, gameState.team1Score - 100);
+            } else {
+                gameState.team2Score = Math.max(0, gameState.team2Score - 100);
+            }
+
             SFX.select();
             saveStateToLocal();
             renderBoard();
 
-            const hintBox = document.getElementById("qHintBanner");
-            if (hintBox) {
-                hintBox.innerText = `💡 تلميح: ${activeQuestionContext.qObj.hint}`;
-                hintBox.style.display = "block";
+            grid.style.display = "grid";
+            updateRevealOptionsButtonState();
+            showToast(`تم خصم 100 نقطة من ${teamName} وإظهار الخيارات (متبقي ${maxAttempts - rev.used} محاولات).`);
+        }
+
+        function renderQuestionMCQOptions(qObj) {
+            const section = document.getElementById("mcqChoicesSection");
+            const grid = document.getElementById("mcqOptionsGrid");
+            const badge = document.getElementById("mcqAttemptBadge");
+            if (!section || !grid) return;
+
+            grid.innerHTML = "";
+            grid.style.display = "none";
+
+            const options = buildOptionsList(qObj.a, qObj.options, activeQuestionContext?.catName || "", "", 1);
+            const letters = ["أ", "ب", "ج", "د"];
+            let pickedCount = 0;
+
+            options.forEach((optText, idx) => {
+                const btn = document.createElement("button");
+                btn.type = "button";
+                btn.className = "mcq-option-btn";
+                btn.innerHTML = `<span class="mcq-option-letter">${letters[idx] || idx + 1}</span><span>${optText}</span>`;
+
+                btn.onclick = () => {
+                    if (btn.classList.contains("picked-option")) {
+                        btn.classList.remove("picked-option");
+                        pickedCount = Math.max(0, pickedCount - 1);
+                        SFX.deselect();
+                        if (badge) badge.innerText = pickedCount > 0 ? `تم تحديد ${pickedCount} خيار` : `${options.length} خيارات ظاهرة`;
+                        return;
+                    }
+
+                    const ap = gameState.activePowers || createDefaultActivePowers();
+                    const maxPicks = ap.twoAnsActiveForTeam ? 2 : 1;
+
+                    if (pickedCount >= maxPicks) {
+                        const existing = Array.from(grid.querySelectorAll(".mcq-option-btn.picked-option"));
+                        if (existing.length > 0) {
+                            existing[0].classList.remove("picked-option");
+                            pickedCount = Math.max(0, pickedCount - 1);
+                        }
+                    }
+
+                    btn.classList.add("picked-option");
+                    pickedCount++;
+                    SFX.select();
+
+                    if (ap.twoAnsActiveForTeam && ap.twoAnsAttemptsLeft > 0) {
+                        ap.twoAnsAttemptsLeft = Math.max(0, ap.twoAnsAttemptsLeft - 1);
+                        gameState.activePowers = ap;
+                        renderActiveQuestionPowersUI();
+                    }
+
+                    if (badge) {
+                        badge.innerText = `تم اختيار: ${optText} — اضغط «إظهار الإجابة» للتحقق`;
+                    }
+                    showToast(`تم اختيار «${optText}». اضغط «إظهار الإجابة» لكشف الإجابة.`);
+                };
+
+                grid.appendChild(btn);
+            });
+
+            updateRevealOptionsButtonState();
+        }
+
+        function showQuestionHint() {
+            if (!activeQuestionContext) return;
+            SFX.click();
+            const hintBanner = document.getElementById("qHintBanner");
+            if (hintBanner) {
+                hintBanner.innerText = `💡 تلميح: ${activeQuestionContext.qObj.hint || "ركّز جيداً في تفاصيل السؤال"}`;
+                hintBanner.style.display = "block";
             }
         }
 
+        function getTierLabel(points) {
+            if (points === 200) return "سهل";
+            if (points === 600) return "وسط";
+            return "صعب";
+        }
+
         /* ================= QUESTION MODAL & TIMER ================= */
-        function openQuestion(cat, qIndex) {
-            const qObj = cat.questions[qIndex];
+        function openQuestion(cat, qIndex, forcedPoints) {
+            const pool = Array.isArray(cat.questions) ? cat.questions : [];
+            const qObj = pool[qIndex];
             if (!qObj) return;
 
-            const effectivePoints = qObj.points;
+            // Immediate question consumption upon opening
+            gameState.usedTiles[`${cat.id}_${qIndex}`] = true;
+            saveStateToLocal();
+            renderBoard();
+
+            const effectivePoints = forcedPoints || qObj.points;
+            const tierTag = getTierLabel(effectivePoints);
 
             activeQuestionContext = {
                 catId: cat.id,
@@ -3253,28 +3414,13 @@
                 qObj,
                 points: effectivePoints
             };
-
-            const dualGrid = document.getElementById("dualOptionsGrid");
-            if (dualGrid) dualGrid.innerHTML = "";
-
             document.getElementById("qModalCategory").innerText = cat.name;
             const pointsPill = document.getElementById("qModalPoints");
-            pointsPill.innerText = `${effectivePoints} نقطة`;
-            pointsPill.classList.remove("doubled");
+            const tierLabel = qObj.level || (effectivePoints === 200 ? "سهل" : effectivePoints === 600 ? "وسط" : "صعب");
+            pointsPill.innerText = `${effectivePoints} نقطة (${tierLabel})`;
 
             document.getElementById("qModalText").innerText = qObj.q;
-
-            const visualStage = document.getElementById("questionVisualStage");
-            const visualCanvas = document.getElementById("questionVisualCanvas");
-            const visualCaption = document.getElementById("questionVisualCaption");
-            const zoomBtn = document.getElementById("zoomVisualBtn");
-            if (visualStage && visualCanvas && visualCaption && zoomBtn) {
-                visualStage.classList.remove("zoomed");
-                zoomBtn.innerText = "🔍 عرض الصورة / التكبير";
-                const visualPayload = renderQuestionVisual(qObj, cat);
-                visualCanvas.innerHTML = visualPayload.svg;
-                visualCaption.innerText = visualPayload.caption;
-            }
+            renderQuestionMCQOptions(qObj);
 
             const hintBanner = document.getElementById("qHintBanner");
             hintBanner.style.display = "none";
@@ -3282,7 +3428,7 @@
 
             const ansBox = document.getElementById("qAnswerBox");
             ansBox.style.display = "none";
-            ansBox.innerText = `الإجابة: ${qObj.a}`;
+            ansBox.innerText = `الإجابة الصحيحة: ${qObj.a}`;
 
             document.getElementById("revealAnswerBtn").style.display = "inline-block";
 
@@ -3419,8 +3565,16 @@
         function closeQuestionWithoutScoring() {
             SFX.click();
             clearInterval(timerInterval);
+            if (activeQuestionContext) {
+                const { catId, qIndex } = activeQuestionContext;
+                gameState.usedTiles[`${catId}_${qIndex}`] = true;
+            }
+            gameState.activePowers = createDefaultActivePowers();
             activeQuestionContext = null;
+            saveStateToLocal();
             closeModal("questionModal");
+            renderBoard();
+            showToast("تم إغلاق السؤال واحتسابه كمستهلك.");
         }
 
         /* ================= WINNER MODAL & CONFETTI ================= */
@@ -3566,96 +3720,5 @@
             initApp();
         }
     </script>
-    /* ================= IMAGES PATCH (embedded, no external files) ================= */
-/* الصق هذا الكود كما هو قبل آخر </script> في index.html */
-(function () {
-    const CAT_IMG = [
-        ["2 ديسمبر","🎆","#065f46","#7f1d1d"],["شعارات","🏙️","#0e7490","#1e293b"],
-        ["مجمعات","🛍️","#9a3412","#1e293b"],["بنات","👩‍🚀","#86198f","#1e293b"],
-        ["الجمعية","🛒","#166534","#1e293b"],["مطاعم","🍛","#b45309","#1e293b"],
-        ["أفاعي","🐍","#047857","#064e3b"],["سحالي","🦎","#0f766e","#134e4a"],
-        ["سلاحف","🐢","#15803d","#1e3a8a"],["الزواحف","🐊","#166534","#052e16"],
-        ["Marvel","🦸","#b91c1c","#1e293b"],["DC","🦇","#1e3a8a","#0f172a"],
-        ["Breaking Bad","⚗️","#4d7c0f","#1e293b"],["Game Of Thrones","🐉","#475569","#0f172a"],
-        ["Stranger Things","🔦","#be123c","#0f172a"],["Harry Potter","🪄","#6d28d9","#1e1b4b"],
-        ["Squid Game","🦑","#be185d","#134e4a"],["Star Wars","🚀","#1e293b","#020617"],
-        ["رعب","👻","#3f3f46","#09090b"],["كلاسيك","🎞️","#92400e","#1c1917"],
-        ["أمثال","📜","#a16207","#292524"],["ألغاز","🧩","#7c3aed","#1e293b"],
-        ["خمن الصورة","🖼️","#0369a1","#1e293b"],["بدون نقاط","🔤","#0f766e","#1e293b"],
-        ["ركز","🎯","#dc2626","#1e293b"],["زووم","🔍","#0891b2","#1e293b"],
-        ["ما هي الدولة","🌍","#0369a1","#064e3b"],["عواصم","🏛️","#7c2d12","#1e293b"],
-        ["أعلام","🏳️","#1d4ed8","#1e293b"],["عملات","💰","#a16207","#1e293b"],
-        ["سياحة","✈️","#0284c7","#1e293b"],["جغرافيا","🗺️","#15803d","#1e293b"],
-        ["الإمارات","🕌","#b45309","#1e293b"]
-    ];
-
-    const Q_IMG = [
-        [/برج/,"🏙️"],[/مول|مجمع|سوق/,"🛍️"],[/طيران|طائرة/,"✈️"],[/فضاء|مسبار|مريخ|رائد/,"🚀"],
-        [/متحف|لوفر/,"🏛️"],[/علم|أعلام/,"🏳️"],[/عاصمة/,"🏛️"],[/عملة|درهم|وون/,"💰"],
-        [/كوبرا|أفعى|أفاعي|ثعبان|الأصلة|أناكوندا/,"🐍"],[/حرباء|سحلية|سحالي|ضب|كومودو|إغوانا|الوزغ/,"🦎"],
-        [/سلحفاة|سلاحف/,"🐢"],[/تمساح|تماسيح/,"🐊"],[/تنين|تنانين/,"🐉"],
-        [/مطرقة|ثور/,"🔨"],[/درع/,"🛡️"],[/سيف/,"⚔️"],[/عرش/,"👑"],[/جدار/,"🧱"],
-        [/كيمياء|كيميائ/,"⚗️"],[/بومة/,"🦉"],[/مكنسة|مكانس|كويدتش|سحر/,"🧹"],
-        [/دمية|ضوء أحمر/,"🚦"],[/سكر|دالغونا/,"🍪"],[/روبوت/,"🤖"],[/باتمان|غوثام/,"🦇"],
-        [/سوبرمان|كريبتون/,"🦸"],[/تمر|قهوة/,"☕"],[/هريس|أكلة|مجبوس|الأرز|أرز/,"🍛"],
-        [/حلوى|خبيص/,"🍯"],[/سمك/,"🐟"],[/جبل|قمة/,"⛰️"],[/مسجد/,"🕌"],[/رياضة/,"🏅"],
-        [/ورقة القيقب|شجرة الأرز/,"🍁"],[/نجمة|نجوم/,"⭐"],[/شمس/,"☀️"],[/ديسمبر|اليوم الوطني/,"🎆"]
-    ];
-
-    function findCat(cat) {
-        const n = (cat && cat.name) ? String(cat.name) : "";
-        return CAT_IMG.find(c => n.includes(c[0])) || ["", "🎲", "#334155", "#0f172a"];
-    }
-
-    function tile(emoji, c1, c2, size) {
-        const gid = "g" + Math.random().toString(36).slice(2, 8);
-        return `<svg width="${size}" height="${size}" viewBox="0 0 96 96">
-            <defs><linearGradient id="${gid}" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/></linearGradient></defs>
-            <rect x="4" y="4" width="88" height="88" rx="20" fill="url(#${gid})" stroke="#fbbf24" stroke-width="2.5"/>
-            <circle cx="76" cy="20" r="18" fill="rgba(255,255,255,0.10)"/>
-            <circle cx="16" cy="82" r="22" fill="rgba(0,0,0,0.18)"/>
-            <text x="48" y="64" text-anchor="middle" font-size="50">${emoji}</text>
-        </svg>`;
-    }
-
-    renderCategoryArt = function (cat, size = 68) {
-        const c = findCat(cat);
-        return tile(c[1], c[2], c[3], size);
-    };
-
-    renderQuestionVisual = function (question, cat) {
-        const pts = (question && question.points) || 200;
-        const catName = (cat && cat.name) || "";
-        if (question && question.img) {
-            return {
-                svg: `<img src="${question.img}" alt="" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:14px" onerror="this.style.display='none'">`,
-                caption: `🖼️ ${catName} • ${pts} نقطة`
-            };
-        }
-        const c = findCat(cat);
-        const hit = Q_IMG.find(r => r[0].test(question.q || ""));
-        const big = hit ? hit[1] : c[1];
-        const small = hit ? c[1] : "";
-        const gid = "q" + Math.random().toString(36).slice(2, 8);
-        const svg = `<svg viewBox="0 0 260 140">
-            <defs><linearGradient id="${gid}" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="${c[2]}"/><stop offset="1" stop-color="${c[3]}"/></linearGradient></defs>
-            <rect x="8" y="8" width="244" height="124" rx="22" fill="url(#${gid})" stroke="#fbbf24" stroke-width="2.5"/>
-            <circle cx="215" cy="35" r="46" fill="rgba(255,255,255,0.09)"/>
-            <circle cx="40" cy="120" r="50" fill="rgba(0,0,0,0.2)"/>
-            <text x="130" y="95" text-anchor="middle" font-size="78">${big}</text>
-            ${small ? `<text x="34" y="46" text-anchor="middle" font-size="26">${small}</text>` : ""}
-            <rect x="170" y="14" width="74" height="24" rx="12" fill="#fbbf24"/>
-            <text x="207" y="31" text-anchor="middle" font-size="13" font-weight="900" fill="#07090e">${pts} نقطة</text>
-        </svg>`;
-        return { svg, caption: `🖼️ ${catName} • ${pts} نقطة` };
-    };
-
-    try {
-        renderSetupSections(document.getElementById("categorySearch")?.value || "");
-        if (document.getElementById("boardScreen").classList.contains("active")) renderBoard();
-    } catch (e) {}
-})();
 </body>
 </html>
