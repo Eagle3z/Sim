@@ -3566,5 +3566,96 @@
             initApp();
         }
     </script>
+    /* ================= IMAGES PATCH (embedded, no external files) ================= */
+/* الصق هذا الكود كما هو قبل آخر </script> في index.html */
+(function () {
+    const CAT_IMG = [
+        ["2 ديسمبر","🎆","#065f46","#7f1d1d"],["شعارات","🏙️","#0e7490","#1e293b"],
+        ["مجمعات","🛍️","#9a3412","#1e293b"],["بنات","👩‍🚀","#86198f","#1e293b"],
+        ["الجمعية","🛒","#166534","#1e293b"],["مطاعم","🍛","#b45309","#1e293b"],
+        ["أفاعي","🐍","#047857","#064e3b"],["سحالي","🦎","#0f766e","#134e4a"],
+        ["سلاحف","🐢","#15803d","#1e3a8a"],["الزواحف","🐊","#166534","#052e16"],
+        ["Marvel","🦸","#b91c1c","#1e293b"],["DC","🦇","#1e3a8a","#0f172a"],
+        ["Breaking Bad","⚗️","#4d7c0f","#1e293b"],["Game Of Thrones","🐉","#475569","#0f172a"],
+        ["Stranger Things","🔦","#be123c","#0f172a"],["Harry Potter","🪄","#6d28d9","#1e1b4b"],
+        ["Squid Game","🦑","#be185d","#134e4a"],["Star Wars","🚀","#1e293b","#020617"],
+        ["رعب","👻","#3f3f46","#09090b"],["كلاسيك","🎞️","#92400e","#1c1917"],
+        ["أمثال","📜","#a16207","#292524"],["ألغاز","🧩","#7c3aed","#1e293b"],
+        ["خمن الصورة","🖼️","#0369a1","#1e293b"],["بدون نقاط","🔤","#0f766e","#1e293b"],
+        ["ركز","🎯","#dc2626","#1e293b"],["زووم","🔍","#0891b2","#1e293b"],
+        ["ما هي الدولة","🌍","#0369a1","#064e3b"],["عواصم","🏛️","#7c2d12","#1e293b"],
+        ["أعلام","🏳️","#1d4ed8","#1e293b"],["عملات","💰","#a16207","#1e293b"],
+        ["سياحة","✈️","#0284c7","#1e293b"],["جغرافيا","🗺️","#15803d","#1e293b"],
+        ["الإمارات","🕌","#b45309","#1e293b"]
+    ];
+
+    const Q_IMG = [
+        [/برج/,"🏙️"],[/مول|مجمع|سوق/,"🛍️"],[/طيران|طائرة/,"✈️"],[/فضاء|مسبار|مريخ|رائد/,"🚀"],
+        [/متحف|لوفر/,"🏛️"],[/علم|أعلام/,"🏳️"],[/عاصمة/,"🏛️"],[/عملة|درهم|وون/,"💰"],
+        [/كوبرا|أفعى|أفاعي|ثعبان|الأصلة|أناكوندا/,"🐍"],[/حرباء|سحلية|سحالي|ضب|كومودو|إغوانا|الوزغ/,"🦎"],
+        [/سلحفاة|سلاحف/,"🐢"],[/تمساح|تماسيح/,"🐊"],[/تنين|تنانين/,"🐉"],
+        [/مطرقة|ثور/,"🔨"],[/درع/,"🛡️"],[/سيف/,"⚔️"],[/عرش/,"👑"],[/جدار/,"🧱"],
+        [/كيمياء|كيميائ/,"⚗️"],[/بومة/,"🦉"],[/مكنسة|مكانس|كويدتش|سحر/,"🧹"],
+        [/دمية|ضوء أحمر/,"🚦"],[/سكر|دالغونا/,"🍪"],[/روبوت/,"🤖"],[/باتمان|غوثام/,"🦇"],
+        [/سوبرمان|كريبتون/,"🦸"],[/تمر|قهوة/,"☕"],[/هريس|أكلة|مجبوس|الأرز|أرز/,"🍛"],
+        [/حلوى|خبيص/,"🍯"],[/سمك/,"🐟"],[/جبل|قمة/,"⛰️"],[/مسجد/,"🕌"],[/رياضة/,"🏅"],
+        [/ورقة القيقب|شجرة الأرز/,"🍁"],[/نجمة|نجوم/,"⭐"],[/شمس/,"☀️"],[/ديسمبر|اليوم الوطني/,"🎆"]
+    ];
+
+    function findCat(cat) {
+        const n = (cat && cat.name) ? String(cat.name) : "";
+        return CAT_IMG.find(c => n.includes(c[0])) || ["", "🎲", "#334155", "#0f172a"];
+    }
+
+    function tile(emoji, c1, c2, size) {
+        const gid = "g" + Math.random().toString(36).slice(2, 8);
+        return `<svg width="${size}" height="${size}" viewBox="0 0 96 96">
+            <defs><linearGradient id="${gid}" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/></linearGradient></defs>
+            <rect x="4" y="4" width="88" height="88" rx="20" fill="url(#${gid})" stroke="#fbbf24" stroke-width="2.5"/>
+            <circle cx="76" cy="20" r="18" fill="rgba(255,255,255,0.10)"/>
+            <circle cx="16" cy="82" r="22" fill="rgba(0,0,0,0.18)"/>
+            <text x="48" y="64" text-anchor="middle" font-size="50">${emoji}</text>
+        </svg>`;
+    }
+
+    renderCategoryArt = function (cat, size = 68) {
+        const c = findCat(cat);
+        return tile(c[1], c[2], c[3], size);
+    };
+
+    renderQuestionVisual = function (question, cat) {
+        const pts = (question && question.points) || 200;
+        const catName = (cat && cat.name) || "";
+        if (question && question.img) {
+            return {
+                svg: `<img src="${question.img}" alt="" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:14px" onerror="this.style.display='none'">`,
+                caption: `🖼️ ${catName} • ${pts} نقطة`
+            };
+        }
+        const c = findCat(cat);
+        const hit = Q_IMG.find(r => r[0].test(question.q || ""));
+        const big = hit ? hit[1] : c[1];
+        const small = hit ? c[1] : "";
+        const gid = "q" + Math.random().toString(36).slice(2, 8);
+        const svg = `<svg viewBox="0 0 260 140">
+            <defs><linearGradient id="${gid}" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="${c[2]}"/><stop offset="1" stop-color="${c[3]}"/></linearGradient></defs>
+            <rect x="8" y="8" width="244" height="124" rx="22" fill="url(#${gid})" stroke="#fbbf24" stroke-width="2.5"/>
+            <circle cx="215" cy="35" r="46" fill="rgba(255,255,255,0.09)"/>
+            <circle cx="40" cy="120" r="50" fill="rgba(0,0,0,0.2)"/>
+            <text x="130" y="95" text-anchor="middle" font-size="78">${big}</text>
+            ${small ? `<text x="34" y="46" text-anchor="middle" font-size="26">${small}</text>` : ""}
+            <rect x="170" y="14" width="74" height="24" rx="12" fill="#fbbf24"/>
+            <text x="207" y="31" text-anchor="middle" font-size="13" font-weight="900" fill="#07090e">${pts} نقطة</text>
+        </svg>`;
+        return { svg, caption: `🖼️ ${catName} • ${pts} نقطة` };
+    };
+
+    try {
+        renderSetupSections(document.getElementById("categorySearch")?.value || "");
+        if (document.getElementById("boardScreen").classList.contains("active")) renderBoard();
+    } catch (e) {}
+})();
 </body>
 </html>
